@@ -1,0 +1,9 @@
+class RouteConstants {
+  static const onboardingScreen = "/onboarding-screen";
+  static const homeScreen = "/home-screen";
+  static const authWelcomeScreen = "/auth-welcome-screen";
+  static const registerSendOtp = "/register-send-otp";
+  static const verifyOtpScreen = "/verify-otp-screen";
+  static const registerScreen = "/register-screen";
+  static const enableLocationScreen = "/enable-location-screen";
+}
