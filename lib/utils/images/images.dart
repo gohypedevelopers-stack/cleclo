@@ -47,4 +47,7 @@ class Images {
   static const String jacketDryClean = 'assets/images/Jacket Dry Clean.png';
   static const String bedsheetWash = 'assets/images/Bedsheet Wash.png';
   static const String comforterClean = 'assets/images/Comforter Clean.png';
+
+  // Booking Screen
+  static const String bookingCard = 'assets/images/bookingcard.png';
 }

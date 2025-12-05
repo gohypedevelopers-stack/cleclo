@@ -8,4 +8,5 @@ class RouteConstants {
   static const enableLocationScreen = "/enable-location-screen";
   static const bottomNavBarScreen = "/bottom-nav-bar";
   static const bookServiceScreen = "/book-service";
+  static const writeReviewScreen = "/write-review";
 }
