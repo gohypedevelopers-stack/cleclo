@@ -1,4 +1,5 @@
 import 'package:cleclo/features/home/view/home_screen.dart';
+import 'package:cleclo/features/home/view/services_screen.dart';
 import 'package:cleclo/utils/theme/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -14,6 +15,12 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
   final List<Widget> _screens = [
     const HomeScreen(),
+    const ServicesScreen(),
+    const Scaffold(
+      body: Center(
+        child: Text('Booking Screen Placeholder'),
+      ),
+    ),
     const Scaffold(
       body: Center(
         child: Text('Profile Screen Placeholder'),
@@ -56,8 +63,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
   Widget _buildNavItem(int index, IconData icon, String label) {
     final isSelected = _currentIndex == index;
 
-    if (index == 0) {
-      // Special styling for Home
+    if (isSelected) {
+      // Special styling for Active Tab (Home or Services)
       return GestureDetector(
         onTap: () => setState(() => _currentIndex = index),
         child: Container(
@@ -92,7 +99,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
       );
     }
 
-    // Standard styling for others
+    // Standard styling for inactive tabs
     return GestureDetector(
       onTap: () => setState(() => _currentIndex = index),
       child: Container(
@@ -103,14 +110,14 @@ class _BottomNavBarState extends State<BottomNavBar> {
           children: [
             Icon(
               icon,
-              color: isSelected ? AppColors.primary : Colors.grey,
+              color: Colors.grey,
               size: 26,
             ),
             const SizedBox(height: 4),
             Text(
               label,
-              style: TextStyle(
-                color: isSelected ? AppColors.primary : Colors.grey,
+              style: const TextStyle(
+                color: Colors.grey,
                 fontSize: 12,
                 fontWeight: FontWeight.w500,
               ),

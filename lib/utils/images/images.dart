@@ -39,4 +39,12 @@ class Images {
   static const String shorts = 'assets/images/Shorts.png';
   static const String jeans = 'assets/images/Jeans.jpg';
   static const String cargoPants = 'assets/images/Cargo Pants.jpg';
+
+  // Services Screen
+  static const String tShirtWash = 'assets/images/T-Shirt Wash.png';
+  static const String trouserWash = 'assets/images/Trouser Wash.png';
+  static const String shirtWashIron = 'assets/images/Shirt Wash & Iron.png';
+  static const String jacketDryClean = 'assets/images/Jacket Dry Clean.png';
+  static const String bedsheetWash = 'assets/images/Bedsheet Wash.png';
+  static const String comforterClean = 'assets/images/Comforter Clean.png';
 }
