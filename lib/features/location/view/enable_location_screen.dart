@@ -1,8 +1,10 @@
 import 'package:cleclo/components/custom_appbar.dart';
 import 'package:cleclo/components/custom_elevated_button.dart';
 import 'package:cleclo/components/custom_outlined_button.dart';
+import 'package:cleclo/routes/route_constants.dart';
 import 'package:cleclo/utils/theme/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 // import 'widgets/custom_widgets.dart'; // where CustomElevatedButton lives
 
 class EnableLocationScreen extends StatelessWidget {
@@ -110,6 +112,7 @@ class EnableLocationScreen extends StatelessWidget {
                 label: 'Enable Location',
                 onPressed: () {
                   // TODO: ask for location permission
+                  context.goNamed(RouteConstants.bottomNavBarScreen);
                 },
               ),
 
@@ -120,6 +123,7 @@ class EnableLocationScreen extends StatelessWidget {
                 label: 'Skip For Now',
                 onPressed: () {
                   // TODO: skip location
+                  context.goNamed(RouteConstants.bottomNavBarScreen);
                 },
               ),
 

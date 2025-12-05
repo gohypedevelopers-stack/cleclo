@@ -3,6 +3,7 @@ import 'package:cleclo/features/auth/view/register_screen.dart';
 import 'package:cleclo/features/auth/view/register_send_otp.dart';
 import 'package:cleclo/features/auth/view/verify_otp_screen.dart';
 import 'package:cleclo/features/location/view/enable_location_screen.dart';
+import 'package:cleclo/features/home/view/bottom_nav_bar.dart';
 import 'package:cleclo/features/onboarding/view/onboarding_screen.dart';
 import 'package:cleclo/routes/route_constants.dart';
 import 'package:flutter/material.dart';
@@ -115,6 +116,11 @@ final GoRouter appRouter = GoRouter(
     //     return ChatImagePreviewScreen(image: file);
     //   },
     // ),
+    GoRoute(
+      path: RouteConstants.bottomNavBarScreen,
+      name: RouteConstants.bottomNavBarScreen,
+      builder: (context, state) => const BottomNavBar(),
+    ),
   ],
   errorBuilder: (context, state) => Scaffold(
     body: Center(child: Text('404: Page not found (${state.uri.path})')),

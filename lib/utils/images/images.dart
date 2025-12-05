@@ -7,4 +7,24 @@ class Images {
   static const String googleLogo = 'assets/images/facebook-logo.png';
   static const String facebookLogo = 'assets/images/google-logo.png';
   static const String appleLogo = 'assets/images/apple-logo.png';
+  
+  // Home Services
+  static const String washing = 'assets/images/washing.png';
+  static const String men = 'assets/images/men.png';
+  static const String kids = 'assets/images/kids.png';
+  static const String women = 'assets/images/women.png';
+  static const String footwear = 'assets/images/footwear.png';
+  static const String institution = 'assets/images/institution.png';
+  
+  // Home Sections
+  static const String earn = 'assets/images/earn.png';
+  static const String howWeWork1 = 'assets/images/howwework1.jpg';
+  static const String howWeWork2 = 'assets/images/howwework2.jpg';
+  static const String howWeWork3 = 'assets/images/howwework3.jpg';
+  
+  static const String banner = 'assets/images/onboarding2.png';
+  
+  static const String latestOffer = 'assets/images/latestoffer.jpg';
+  static const String promotion1 = 'assets/images/offer_promotion_1.png';
+  static const String promotion2 = 'assets/images/offer_promotion_2.png';
 }
