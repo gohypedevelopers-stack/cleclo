@@ -27,4 +27,16 @@ class Images {
   static const String latestOffer = 'assets/images/latestoffer.jpg';
   static const String promotion1 = 'assets/images/offer_promotion_1.png';
   static const String promotion2 = 'assets/images/offer_promotion_2.png';
+
+  // Booking - Sub Categories
+  static const String casualWear = 'assets/images/Casual Wear.png';
+  static const String formalWear = 'assets/images/Formal Wear.png';
+  static const String ethnicWear = 'assets/images/Ethnic Wear.png';
+
+  // Booking - Items
+  static const String tShirt = 'assets/images/T-Shirt.png';
+  static const String capri = 'assets/images/Capri.png';
+  static const String shorts = 'assets/images/Shorts.png';
+  static const String jeans = 'assets/images/Jeans.jpg';
+  static const String cargoPants = 'assets/images/Cargo Pants.jpg';
 }

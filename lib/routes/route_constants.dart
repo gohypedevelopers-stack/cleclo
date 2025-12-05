@@ -7,4 +7,5 @@ class RouteConstants {
   static const registerScreen = "/register-screen";
   static const enableLocationScreen = "/enable-location-screen";
   static const bottomNavBarScreen = "/bottom-nav-bar";
+  static const bookServiceScreen = "/book-service";
 }

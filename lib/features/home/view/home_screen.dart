@@ -1,6 +1,8 @@
 import 'package:cleclo/utils/images/images.dart';
 import 'package:cleclo/utils/theme/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:cleclo/routes/route_constants.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -311,47 +313,52 @@ class HomeScreen extends StatelessWidget {
         ),
         itemCount: services.length,
         itemBuilder: (context, index) {
-          return Container(
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(20),
-              border: Border.all(color: Colors.grey.shade200),
-            ),
-            child: Column(
-              children: [
-                Expanded(
-                  flex: 3,
-                  child: Container(
-                    width: double.infinity,
-                    margin: const EdgeInsets.all(8),
-                    decoration: BoxDecoration(
-                      color: const Color(0xFFF5F5F5), // Light grey background
-                      borderRadius: BorderRadius.circular(16),
+          return GestureDetector(
+            onTap: () {
+              context.push(RouteConstants.bookServiceScreen);
+            },
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(color: Colors.grey.shade200),
+              ),
+              child: Column(
+                children: [
+                  Expanded(
+                    flex: 3,
+                    child: Container(
+                      width: double.infinity,
+                      margin: const EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFF5F5F5), // Light grey background
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      child: Center(
+                        child: Image.asset(
+                          services[index]['image'] as String,
+                          width: 80,
+                          height: 80,
+                          fit: BoxFit.contain,
+                        ),
+                      ),
                     ),
+                  ),
+                  Expanded(
+                    flex: 1,
                     child: Center(
-                      child: Image.asset(
-                        services[index]['image'] as String,
-                        width: 80,
-                        height: 80,
-                        fit: BoxFit.contain,
+                      child: Text(
+                        services[index]['label'] as String,
+                        style: const TextStyle(
+                          fontSize: 13,
+                          fontWeight: FontWeight.w500,
+                          color: AppColors.gray700,
+                        ),
                       ),
                     ),
                   ),
-                ),
-                Expanded(
-                  flex: 1,
-                  child: Center(
-                    child: Text(
-                      services[index]['label'] as String,
-                      style: const TextStyle(
-                        fontSize: 13,
-                        fontWeight: FontWeight.w500,
-                        color: AppColors.gray700,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
           );
         },

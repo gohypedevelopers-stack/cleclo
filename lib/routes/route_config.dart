@@ -2,6 +2,7 @@ import 'package:cleclo/features/auth/view/auth_welcome_screen.dart';
 import 'package:cleclo/features/auth/view/register_screen.dart';
 import 'package:cleclo/features/auth/view/register_send_otp.dart';
 import 'package:cleclo/features/auth/view/verify_otp_screen.dart';
+import 'package:cleclo/features/home/view/book_service_screen.dart';
 import 'package:cleclo/features/location/view/enable_location_screen.dart';
 import 'package:cleclo/features/home/view/bottom_nav_bar.dart';
 import 'package:cleclo/features/onboarding/view/onboarding_screen.dart';
@@ -43,79 +44,11 @@ final GoRouter appRouter = GoRouter(
       name: RouteConstants.enableLocationScreen,
       builder: (context, state) => const EnableLocationScreen(),
     ),
-    // GoRoute(
-    //   path: RouteConstants.forgotPasswordScreen,
-    //   name: RouteConstants.forgotPasswordScreen,
-    //   builder: (context, state) => const ForgotPasswordPage(),
-    // ),
-    // GoRoute(
-    //   path: RouteConstants.bottomNavBarScreen,
-    //   name: RouteConstants.bottomNavBarScreen,
-    //   builder: (context, state) => const BottomNavBar(),
-    // ),
-    // GoRoute(
-    //   path: RouteConstants.doctorDetailsScreen,
-    //   name: RouteConstants.doctorDetailsScreen,
-    //   builder: (context, state) => const DoctorDetailsScreen(),
-    // ),
-    // GoRoute(
-    //   path: RouteConstants.patientDetailsScreen,
-    //   name: RouteConstants.patientDetailsScreen,
-    //   builder: (context, state) => const PatientDetailsScreen(),
-    // ),
-    // GoRoute(
-    //   path: RouteConstants.selectPackageScreen,
-    //   name: RouteConstants.selectPackageScreen,
-    //   builder: (context, state) => const SelectPackageScreen(),
-    // ),
-    // GoRoute(
-    //   path: RouteConstants.placeAppointmentScreen,
-    //   name: RouteConstants.placeAppointmentScreen,
-    //   builder: (context, state) => const PlaceAppointmentScreen(),
-    // ),
-    // GoRoute(
-    //   path: RouteConstants.paymentSuccessScreen,
-    //   name: RouteConstants.paymentSuccessScreen,
-    //   builder: (context, state) => const PaymentSuccessScreen(),
-    // ),
-    // GoRoute(
-    //   path: RouteConstants.notificationsScreen,
-    //   name: RouteConstants.notificationsScreen,
-    //   builder: (context, state) => const NotificationsScreen(),
-    // ),
-    // GoRoute(
-    //   path: RouteConstants.editProfileScreen,
-    //   name: RouteConstants.editProfileScreen,
-    //   builder: (context, state) => const EditProfileScreen(),
-    // ),
-    // GoRoute(
-    //   path: RouteConstants.pharmacyHomeScreen,
-    //   name: RouteConstants.pharmacyHomeScreen,
-    //   builder: (context, state) => const PharmacyHomeScreen(),
-    // ),
-    // GoRoute(
-    //   path: RouteConstants.pharmacyProductsDetailsScreen,
-    //   name: RouteConstants.pharmacyProductsDetailsScreen,
-    //   builder: (context, state) => const PharmacyProductsDetailsScreen(),
-    // ),
-    // GoRoute(
-    //   path: RouteConstants.cartScreen,
-    //   name: RouteConstants.cartScreen,
-    //   builder: (context, state) => const CartScreen(),
-    // ),
-    // GoRoute(
-    //   path: RouteConstants.chatScreen,
-    //   name: RouteConstants.chatScreen,
-    //   builder: (context, state) => const ChatScreen(),
-    // ),
-    // GoRoute(
-    //   path: RouteConstants.chatImagePreviewScreen,
-    //   name: RouteConstants.chatImagePreviewScreen,
-    //   builder: (context, state) {
-    //     final file = state.extra as File;
-    //     return ChatImagePreviewScreen(image: file);
-    //   },
-    // ),
+    GoRoute(
+      path: RouteConstants.bookServiceScreen,
+      name: RouteConstants.bookServiceScreen,
+      builder: (context, state) => const BookServiceScreen(),
+    ),
     GoRoute(
       path: RouteConstants.bottomNavBarScreen,
       name: RouteConstants.bottomNavBarScreen,
