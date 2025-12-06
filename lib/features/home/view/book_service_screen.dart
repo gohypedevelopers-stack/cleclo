@@ -1,4 +1,5 @@
 import 'package:cleclo/utils/images/images.dart';
+import 'package:cleclo/routes/route_constants.dart';
 import 'package:cleclo/utils/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -292,7 +293,9 @@ class _BookServiceScreenState extends State<BookServiceScreen> {
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      context.push(RouteConstants.yourCollectionScreen);
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFF43A047),
                       padding: const EdgeInsets.symmetric(vertical: 16),

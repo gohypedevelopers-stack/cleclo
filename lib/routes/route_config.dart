@@ -10,6 +10,8 @@ import 'package:cleclo/features/home/view/write_review_screen.dart';
 import 'package:cleclo/features/home/view/track_order_screen.dart';
 import 'package:cleclo/features/home/view/order_details_screen.dart';
 import 'package:cleclo/features/home/view/cancellation_successful_screen.dart';
+import 'package:cleclo/features/home/view/your_collection_screen.dart';
+import 'package:cleclo/features/home/view/upload_image_screen.dart';
 import 'package:cleclo/routes/route_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -77,6 +79,16 @@ final GoRouter appRouter = GoRouter(
       path: RouteConstants.cancellationSuccessfulScreen,
       name: RouteConstants.cancellationSuccessfulScreen,
       builder: (context, state) => const CancellationSuccessfulScreen(),
+    ),
+    GoRoute(
+      path: RouteConstants.yourCollectionScreen,
+      name: RouteConstants.yourCollectionScreen,
+      builder: (context, state) => const YourCollectionScreen(),
+    ),
+    GoRoute(
+      path: RouteConstants.uploadImageScreen,
+      name: RouteConstants.uploadImageScreen,
+      builder: (context, state) => const UploadImageScreen(),
     ),
   ],
   errorBuilder: (context, state) => Scaffold(

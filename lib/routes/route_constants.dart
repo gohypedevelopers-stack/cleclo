@@ -12,4 +12,6 @@ class RouteConstants {
   static const trackOrderScreen = "/track-order";
   static const orderDetailsScreen = "/order-details";
   static const cancellationSuccessfulScreen = "/cancellation-successful";
+  static const yourCollectionScreen = "/your-collection";
+  static const uploadImageScreen = "/upload-image";
 }
