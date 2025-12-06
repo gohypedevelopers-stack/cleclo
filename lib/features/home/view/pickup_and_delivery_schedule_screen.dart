@@ -1,6 +1,7 @@
 import 'package:cleclo/utils/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:cleclo/routes/route_constants.dart';
 
 class PickupAndDeliveryScheduleScreen extends StatefulWidget {
   const PickupAndDeliveryScheduleScreen({super.key});
@@ -116,8 +117,7 @@ class _PickupAndDeliveryScheduleScreenState extends State<PickupAndDeliverySched
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                  // Navigate to Order Summary or Confirmation...
-                  // User hasn't shown next screen yet.
+                  context.push(RouteConstants.reviewOrderScreen);
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFF388E3C), // Dark green

@@ -20,4 +20,7 @@ class RouteConstants {
   static const pickupAndDeliveryAddressScreen = "/pickup-and-delivery-address";
   static const chooseLocationScreen = "/choose-location";
   static const pickupAndDeliveryScheduleScreen = "/pickup-and-delivery-schedule";
+  static const reviewOrderScreen = "/review-order";
+  static const paymentScreen = "/payment";
+  static const bookingSuccessScreen = "/booking-success";
 }

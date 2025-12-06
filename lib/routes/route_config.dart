@@ -18,6 +18,9 @@ import 'package:cleclo/features/home/view/confirm_service_details_screen.dart';
 import 'package:cleclo/features/home/view/pickup_and_delivery_address_screen.dart';
 import 'package:cleclo/features/home/view/choose_location_screen.dart';
 import 'package:cleclo/features/home/view/pickup_and_delivery_schedule_screen.dart';
+import 'package:cleclo/features/home/view/review_order_screen.dart';
+import 'package:cleclo/features/home/view/payment_screen.dart';
+import 'package:cleclo/features/home/view/booking_success_screen.dart';
 import 'package:cleclo/routes/route_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -125,6 +128,21 @@ final GoRouter appRouter = GoRouter(
       path: RouteConstants.pickupAndDeliveryScheduleScreen,
       name: RouteConstants.pickupAndDeliveryScheduleScreen,
       builder: (context, state) => const PickupAndDeliveryScheduleScreen(),
+    ),
+    GoRoute(
+      path: RouteConstants.reviewOrderScreen,
+      name: RouteConstants.reviewOrderScreen,
+      builder: (context, state) => const ReviewOrderScreen(),
+    ),
+    GoRoute(
+      path: RouteConstants.paymentScreen,
+      name: RouteConstants.paymentScreen,
+      builder: (context, state) => const PaymentScreen(),
+    ),
+    GoRoute(
+      path: RouteConstants.bookingSuccessScreen,
+      name: RouteConstants.bookingSuccessScreen,
+      builder: (context, state) => const BookingSuccessScreen(),
     ),
   ],
   errorBuilder: (context, state) => Scaffold(

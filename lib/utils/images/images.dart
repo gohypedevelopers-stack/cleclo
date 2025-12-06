@@ -53,4 +53,6 @@ class Images {
   static const String whiteTShirt = 'assets/images/whitetshirt.png';
   static const String locationIllustration = 'assets/images/location_illustration.png';
   static const String map = 'assets/images/map.png';
+  static const String mastercard = 'assets/images/mastercard.png';
+  static const String gpay = 'assets/images/gpay.png';
 }
