@@ -14,4 +14,5 @@ class RouteConstants {
   static const cancellationSuccessfulScreen = "/cancellation-successful";
   static const yourCollectionScreen = "/your-collection";
   static const uploadImageScreen = "/upload-image";
+  static const confirmPhotoScreen = "/confirm-photo";
 }

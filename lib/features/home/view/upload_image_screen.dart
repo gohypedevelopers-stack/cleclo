@@ -1,6 +1,7 @@
 import 'package:cleclo/utils/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:cleclo/routes/route_constants.dart';
 import 'dart:ui'; // Needed for PathMetric
 
 class UploadImageScreen extends StatelessWidget {
@@ -82,7 +83,9 @@ class UploadImageScreen extends StatelessWidget {
                   _buildActionButton(
                     icon: Icons.camera_alt_outlined, 
                     label: 'Take Photo',
-                    onTap: () {},
+                    onTap: () {
+                      context.push(RouteConstants.confirmPhotoScreen);
+                    },
                   ),
                   const SizedBox(height: 12), // Reduced spacing
                   _buildActionButton(

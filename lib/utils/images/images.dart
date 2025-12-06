@@ -50,4 +50,5 @@ class Images {
 
   // Booking Screen
   static const String bookingCard = 'assets/images/bookingcard.png';
+  static const String whiteTShirt = 'assets/images/whitetshirt.png';
 }
