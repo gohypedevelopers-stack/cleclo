@@ -144,8 +144,7 @@ class YourSelectionScreen extends StatelessWidget {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      // Navigate to next flow... maybe Payment or Address?
-                      // User hasn't specified.
+                      context.push(RouteConstants.confirmServiceDetailsScreen);
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFF388E3C), // Darker Green

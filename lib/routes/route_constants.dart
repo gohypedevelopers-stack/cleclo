@@ -16,4 +16,8 @@ class RouteConstants {
   static const uploadImageScreen = "/upload-image";
   static const confirmPhotoScreen = "/confirm-photo";
   static const yourSelectionScreen = "/your-selection";
+  static const confirmServiceDetailsScreen = "/confirm-service-details";
+  static const pickupAndDeliveryAddressScreen = "/pickup-and-delivery-address";
+  static const chooseLocationScreen = "/choose-location";
+  static const pickupAndDeliveryScheduleScreen = "/pickup-and-delivery-schedule";
 }

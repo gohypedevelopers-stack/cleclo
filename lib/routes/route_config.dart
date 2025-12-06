@@ -14,6 +14,10 @@ import 'package:cleclo/features/home/view/your_collection_screen.dart';
 import 'package:cleclo/features/home/view/upload_image_screen.dart';
 import 'package:cleclo/features/home/view/confirm_photo_screen.dart';
 import 'package:cleclo/features/home/view/your_selection_screen.dart';
+import 'package:cleclo/features/home/view/confirm_service_details_screen.dart';
+import 'package:cleclo/features/home/view/pickup_and_delivery_address_screen.dart';
+import 'package:cleclo/features/home/view/choose_location_screen.dart';
+import 'package:cleclo/features/home/view/pickup_and_delivery_schedule_screen.dart';
 import 'package:cleclo/routes/route_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -101,6 +105,26 @@ final GoRouter appRouter = GoRouter(
       path: RouteConstants.yourSelectionScreen,
       name: RouteConstants.yourSelectionScreen,
       builder: (context, state) => const YourSelectionScreen(),
+    ),
+    GoRoute(
+      path: RouteConstants.confirmServiceDetailsScreen,
+      name: RouteConstants.confirmServiceDetailsScreen,
+      builder: (context, state) => const ConfirmServiceDetailsScreen(),
+    ),
+    GoRoute(
+      path: RouteConstants.pickupAndDeliveryAddressScreen,
+      name: RouteConstants.pickupAndDeliveryAddressScreen,
+      builder: (context, state) => const PickupAndDeliveryAddressScreen(),
+    ),
+    GoRoute(
+      path: RouteConstants.chooseLocationScreen,
+      name: RouteConstants.chooseLocationScreen,
+      builder: (context, state) => const ChooseLocationScreen(),
+    ),
+    GoRoute(
+      path: RouteConstants.pickupAndDeliveryScheduleScreen,
+      name: RouteConstants.pickupAndDeliveryScheduleScreen,
+      builder: (context, state) => const PickupAndDeliveryScheduleScreen(),
     ),
   ],
   errorBuilder: (context, state) => Scaffold(
