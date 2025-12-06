@@ -1,4 +1,5 @@
 import 'package:cleclo/utils/images/images.dart';
+import 'package:cleclo/routes/route_constants.dart';
 import 'package:cleclo/utils/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -339,7 +340,7 @@ class OrderDetailsScreen extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: const [
-                  Text('\$21', style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
+                  Text('₹21', style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
                    Text('Edit', style: TextStyle(color: Color(0xFF43A047), fontSize: 12)),
                 ],
               ),
@@ -365,9 +366,9 @@ class OrderDetailsScreen extends StatelessWidget {
             
             const Padding(padding: EdgeInsets.symmetric(vertical: 16), child: Divider()),
 
-            _buildPriceRow('Service Charge Incl. tax', '\$21', isLink: true),
+            _buildPriceRow('Service Charge Incl. tax', '₹21', isLink: true),
             const SizedBox(height: 12),
-            _buildPriceRow('Collection & Delivery Charge', '\$5'),
+            _buildPriceRow('Collection & Delivery Charge', '₹5'),
             const SizedBox(height: 12),
             _buildPriceRow('Promo Code', 'Enter', isGreen: true),
             
@@ -377,7 +378,7 @@ class OrderDetailsScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const [
                 Text('Order Subtotal', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Color(0xFF1B263B))),
-                Text('\$26', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Color(0xFF1B263B))),
+                Text('₹26', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Color(0xFF1B263B))),
               ],
             ),
         ],
@@ -609,9 +610,8 @@ void _showCancelDialog(BuildContext context) {
                 Expanded(
                   child: ElevatedButton(
                     onPressed: () {
-                      // Perform cancellation logic
-                      context.pop();
-                      context.pop(); // Go back to track order list or home
+                      context.pop(); // Close dialog
+                      context.push(RouteConstants.cancellationSuccessfulScreen);
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFFE53935),
