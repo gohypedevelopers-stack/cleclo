@@ -15,4 +15,5 @@ class RouteConstants {
   static const yourCollectionScreen = "/your-collection";
   static const uploadImageScreen = "/upload-image";
   static const confirmPhotoScreen = "/confirm-photo";
+  static const yourSelectionScreen = "/your-selection";
 }

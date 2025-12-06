@@ -13,6 +13,7 @@ import 'package:cleclo/features/home/view/cancellation_successful_screen.dart';
 import 'package:cleclo/features/home/view/your_collection_screen.dart';
 import 'package:cleclo/features/home/view/upload_image_screen.dart';
 import 'package:cleclo/features/home/view/confirm_photo_screen.dart';
+import 'package:cleclo/features/home/view/your_selection_screen.dart';
 import 'package:cleclo/routes/route_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -95,6 +96,11 @@ final GoRouter appRouter = GoRouter(
       path: RouteConstants.confirmPhotoScreen,
       name: RouteConstants.confirmPhotoScreen,
       builder: (context, state) => const ConfirmPhotoScreen(),
+    ),
+    GoRoute(
+      path: RouteConstants.yourSelectionScreen,
+      name: RouteConstants.yourSelectionScreen,
+      builder: (context, state) => const YourSelectionScreen(),
     ),
   ],
   errorBuilder: (context, state) => Scaffold(

@@ -2,6 +2,7 @@ import 'package:cleclo/utils/images/images.dart';
 import 'package:cleclo/utils/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:cleclo/routes/route_constants.dart';
 
 class ConfirmPhotoScreen extends StatelessWidget {
   const ConfirmPhotoScreen({super.key});
@@ -85,14 +86,7 @@ class ConfirmPhotoScreen extends StatelessWidget {
                    width: double.infinity,
                    child: ElevatedButton(
                      onPressed: () {
-                        // Logic to use photo - for now maybe go back or show success? 
-                        // User hasn't specified what happens next. 
-                        // I'll assume it goes back to Collection or just stays there for now.
-                        // Actually, logic usually is "Use Photo" -> Returns image to previous screen. 
-                        // But for now I'll just pop or do nothing until specified. 
-                        // Wait, "Use Photo" likely means confirming the upload. 
-                        // I'll make it navigate back to "YourCollection" maybe? Or stay. 
-                        // I will add a placeholder action.
+                        context.push(RouteConstants.yourSelectionScreen);
                      },
                      style: ElevatedButton.styleFrom(
                        backgroundColor: const Color(0xFF558B2F), // Greenish
