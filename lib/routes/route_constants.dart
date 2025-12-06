@@ -23,4 +23,5 @@ class RouteConstants {
   static const reviewOrderScreen = "/review-order";
   static const paymentScreen = "/payment";
   static const bookingSuccessScreen = "/booking-success";
+  static const editProfileScreen = "/edit-profile";
 }

@@ -53,13 +53,16 @@ class ProfileScreen extends StatelessWidget {
                           const SizedBox(height: 4),
                           Text('jane.doe@email.com', style: TextStyle(color: Colors.grey.shade600, fontSize: 13)),
                           const SizedBox(height: 16),
-                          Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
-                            decoration: BoxDecoration(
-                              color: const Color(0xFFF1F1F1), // Light Grey Button
-                              borderRadius: BorderRadius.circular(20),
+                          GestureDetector(
+                            onTap: () => context.push(RouteConstants.editProfileScreen),
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
+                              decoration: BoxDecoration(
+                                color: const Color(0xFFF1F1F1), // Light Grey Button
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                              child: const Text('Edit', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
                             ),
-                            child: const Text('Edit', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
                           )
                         ],
                       ),

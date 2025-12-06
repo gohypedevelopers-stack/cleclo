@@ -21,6 +21,7 @@ import 'package:cleclo/features/home/view/pickup_and_delivery_schedule_screen.da
 import 'package:cleclo/features/home/view/review_order_screen.dart';
 import 'package:cleclo/features/home/view/payment_screen.dart';
 import 'package:cleclo/features/home/view/booking_success_screen.dart';
+import 'package:cleclo/features/home/view/edit_profile_screen.dart';
 import 'package:cleclo/routes/route_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -143,6 +144,11 @@ final GoRouter appRouter = GoRouter(
       path: RouteConstants.bookingSuccessScreen,
       name: RouteConstants.bookingSuccessScreen,
       builder: (context, state) => const BookingSuccessScreen(),
+    ),
+    GoRoute(
+      path: RouteConstants.editProfileScreen,
+      name: RouteConstants.editProfileScreen,
+      builder: (context, state) => const EditProfileScreen(),
     ),
   ],
   errorBuilder: (context, state) => Scaffold(
