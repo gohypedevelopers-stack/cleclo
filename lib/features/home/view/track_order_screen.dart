@@ -1,3 +1,4 @@
+import 'package:cleclo/routes/route_constants.dart';
 import 'package:cleclo/utils/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -30,6 +31,7 @@ class TrackOrderScreen extends StatelessWidget {
         padding: const EdgeInsets.all(20),
         children: [
           _buildOrderCard(
+            context,
             orderId: '#1D3453A',
             startDate: '4, Oct',
             startTime: '10:00 AM',
@@ -49,6 +51,7 @@ class TrackOrderScreen extends StatelessWidget {
           ),
           const SizedBox(height: 16),
           _buildOrderCard(
+            context,
             orderId: '#1C3123A',
             startDate: '1, Oct',
             startTime: '12:00 PM',
@@ -62,7 +65,8 @@ class TrackOrderScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildOrderCard({
+  Widget _buildOrderCard(
+    BuildContext context, {
     required String orderId,
     required String startDate,
     required String startTime,
@@ -71,8 +75,10 @@ class TrackOrderScreen extends StatelessWidget {
     required double progress,
     required bool isCompleted,
   }) {
-    return Container(
-      padding: const EdgeInsets.all(20),
+    return GestureDetector(
+      onTap: () => context.push(RouteConstants.orderDetailsScreen),
+      child: Container(
+        padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(24),
@@ -210,6 +216,7 @@ class TrackOrderScreen extends StatelessWidget {
             },
           ),
         ],
+      ),
       ),
     );
   }

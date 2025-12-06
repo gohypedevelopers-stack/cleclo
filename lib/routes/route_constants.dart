@@ -10,4 +10,5 @@ class RouteConstants {
   static const bookServiceScreen = "/book-service";
   static const writeReviewScreen = "/write-review";
   static const trackOrderScreen = "/track-order";
+  static const orderDetailsScreen = "/order-details";
 }
