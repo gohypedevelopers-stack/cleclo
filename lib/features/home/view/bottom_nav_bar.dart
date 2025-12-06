@@ -1,6 +1,7 @@
 import 'package:cleclo/features/home/view/home_screen.dart';
 import 'package:cleclo/features/home/view/services_screen.dart';
 import 'package:cleclo/features/home/view/booking_screen.dart';
+import 'package:cleclo/features/home/view/profile_screen.dart';
 import 'package:cleclo/utils/theme/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -18,11 +19,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     const HomeScreen(),
     const ServicesScreen(),
     const BookingScreen(),
-    const Scaffold(
-      body: Center(
-        child: Text('Profile Screen Placeholder'),
-      ),
-    ),
+    const ProfileScreen(),
   ];
 
   @override

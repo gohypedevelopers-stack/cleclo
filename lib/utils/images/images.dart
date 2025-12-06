@@ -55,4 +55,5 @@ class Images {
   static const String map = 'assets/images/map.png';
   static const String mastercard = 'assets/images/mastercard.png';
   static const String gpay = 'assets/images/gpay.png';
+  static const String profilePhoto = 'assets/images/profilephoto.png';
 }
