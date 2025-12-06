@@ -9,4 +9,5 @@ class RouteConstants {
   static const bottomNavBarScreen = "/bottom-nav-bar";
   static const bookServiceScreen = "/book-service";
   static const writeReviewScreen = "/write-review";
+  static const trackOrderScreen = "/track-order";
 }

@@ -7,6 +7,7 @@ import 'package:cleclo/features/location/view/enable_location_screen.dart';
 import 'package:cleclo/features/home/view/bottom_nav_bar.dart';
 import 'package:cleclo/features/onboarding/view/onboarding_screen.dart';
 import 'package:cleclo/features/home/view/write_review_screen.dart';
+import 'package:cleclo/features/home/view/track_order_screen.dart';
 import 'package:cleclo/routes/route_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -59,6 +60,11 @@ final GoRouter appRouter = GoRouter(
       path: RouteConstants.writeReviewScreen,
       name: RouteConstants.writeReviewScreen,
       builder: (context, state) => const WriteReviewScreen(),
+    ),
+    GoRoute(
+      path: RouteConstants.trackOrderScreen,
+      name: RouteConstants.trackOrderScreen,
+      builder: (context, state) => const TrackOrderScreen(),
     ),
   ],
   errorBuilder: (context, state) => Scaffold(

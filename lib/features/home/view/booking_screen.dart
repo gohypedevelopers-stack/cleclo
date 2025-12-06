@@ -51,6 +51,9 @@ class BookingScreen extends StatelessWidget {
             primaryButtonText: 'Track Order',
             secondaryButtonText: 'Cancel',
             isPrimaryButtonGreen: true,
+            onPrimaryTap: () {
+              context.push(RouteConstants.trackOrderScreen);
+            },
           ),
           const SizedBox(height: 20),
           _buildBookingCard(
