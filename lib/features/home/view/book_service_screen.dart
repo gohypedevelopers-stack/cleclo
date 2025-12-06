@@ -210,19 +210,6 @@ class _BookServiceScreenState extends State<BookServiceScreen> {
                                     fontWeight: FontWeight.w600,
                                   ),
                                 ),
-                                Container(
-                                  margin: const EdgeInsets.symmetric(horizontal: 8),
-                                  width: 1,
-                                  height: 12,
-                                  color: Colors.grey.shade300,
-                                ),
-                                Text(
-                                  item['service'],
-                                  style: TextStyle(
-                                    color: Colors.grey.shade600,
-                                    fontSize: 12,
-                                  ),
-                                ),
                               ],
                             ),
                           ],
