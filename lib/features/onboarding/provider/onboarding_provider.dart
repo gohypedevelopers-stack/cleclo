@@ -25,10 +25,7 @@ class OnboardingProvider extends ChangeNotifier {
   }
 
   void skip(BuildContext context) {
-    // TODO: navigate to main app screen
-    ScaffoldMessenger.of(
-      context,
-    ).showSnackBar(const SnackBar(content: Text('Skipped onboarding')));
+    context.pushNamed(RouteConstants.authWelcomeScreen);
   }
 
   @override
