@@ -292,24 +292,24 @@ class HomeScreen extends StatelessWidget {
 
   Widget _buildServicesGrid() {
     final services = [
-      {'image': Images.washing, 'label': 'Washing'},
+      {'image': Images.women, 'label': 'Women'},
       {'image': Images.men, 'label': 'Men'},
       {'image': Images.kids, 'label': 'Kids'},
-      {'image': Images.women, 'label': 'Women'},
       {'image': Images.footwear, 'label': 'Household'},
       {'image': Images.institution, 'label': 'Institutions'},
+      {'image': Images.washing, 'label': 'Others'},
     ];
 
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 16),
       child: GridView.builder(
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 3,
-          crossAxisSpacing: 12,
-          mainAxisSpacing: 12,
-          childAspectRatio: 0.75, // Taller for the layout
+          crossAxisSpacing: 10,
+          mainAxisSpacing: 10,
+          childAspectRatio: 0.82, // Slightly taller cards like reference
         ),
         itemCount: services.length,
         itemBuilder: (context, index) {
@@ -319,41 +319,40 @@ class HomeScreen extends StatelessWidget {
             },
             child: Container(
               decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20),
-                border: Border.all(color: Colors.grey.shade200),
+                color: const Color(0xFFF8F8F8), // Off-white background matching reference
+                borderRadius: BorderRadius.circular(12), // Subtle rounded corners
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.04),
+                    blurRadius: 8,
+                    offset: const Offset(0, 2),
+                  ),
+                ],
               ),
               child: Column(
                 children: [
+                  // Image area - takes up ~75% of card height
                   Expanded(
                     flex: 3,
-                    child: Container(
-                      width: double.infinity,
-                      margin: const EdgeInsets.all(8),
-                      decoration: BoxDecoration(
-                        color: const Color(0xFFF5F5F5), // Light grey background
-                        borderRadius: BorderRadius.circular(16),
-                      ),
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
                       child: Center(
                         child: Image.asset(
                           services[index]['image'] as String,
-                          width: 80,
-                          height: 80,
                           fit: BoxFit.contain,
                         ),
                       ),
                     ),
                   ),
-                  Expanded(
-                    flex: 1,
-                    child: Center(
-                      child: Text(
-                        services[index]['label'] as String,
-                        style: const TextStyle(
-                          fontSize: 13,
-                          fontWeight: FontWeight.w500,
-                          color: AppColors.gray700,
-                        ),
+                  // Label at the bottom - ~25% of card height
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 10),
+                    child: Text(
+                      services[index]['label'] as String,
+                      style: const TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w500,
+                        color: Color(0xFF5A5A5A), // Gray text color
                       ),
                     ),
                   ),
