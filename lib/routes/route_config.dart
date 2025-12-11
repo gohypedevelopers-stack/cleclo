@@ -22,6 +22,7 @@ import 'package:cleclo/features/home/view/review_order_screen.dart';
 import 'package:cleclo/features/home/view/payment_screen.dart';
 import 'package:cleclo/features/home/view/booking_success_screen.dart';
 import 'package:cleclo/features/home/view/edit_profile_screen.dart';
+import 'package:cleclo/features/home/view/wallet_screen.dart';
 import 'package:cleclo/routes/route_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -155,6 +156,11 @@ final GoRouter appRouter = GoRouter(
       path: RouteConstants.editProfileScreen,
       name: RouteConstants.editProfileScreen,
       builder: (context, state) => const EditProfileScreen(),
+    ),
+    GoRoute(
+      path: RouteConstants.walletScreen,
+      name: RouteConstants.walletScreen,
+      builder: (context, state) => const WalletScreen(),
     ),
   ],
   errorBuilder: (context, state) => Scaffold(

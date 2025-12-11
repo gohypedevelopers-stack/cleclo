@@ -97,7 +97,9 @@ class ProfileScreen extends StatelessWidget {
                 ),
                 child: Column(
                   children: [
-                    _buildMenuItem(Icons.account_balance_wallet, 'My Wallet', () {}),
+                    _buildMenuItem(Icons.account_balance_wallet, 'My Wallet', () {
+                      context.push(RouteConstants.walletScreen);
+                    }),
                     const Divider(height: 30),
                     _buildMenuItem(Icons.settings, 'Settings', () {}),
                     const Divider(height: 30),
