@@ -235,23 +235,23 @@ class YourCollectionScreen extends StatelessWidget {
           ),
           const SizedBox(height: 16),
           // Upload Image Button
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(vertical: 12),
-            decoration: BoxDecoration(
-              color: const Color(0xFFE8F5E9), // Light green bg
-              borderRadius: BorderRadius.circular(30),
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(Icons.file_upload_outlined, color: Color(0xFF43A047), size: 20),
-                 SizedBox(width: 8),
-                GestureDetector(
-                  onTap: () {
-                    context.push(RouteConstants.uploadImageScreen);
-                  },
-                  child: Text(
+          GestureDetector(
+            onTap: () {
+              context.push(RouteConstants.uploadImageScreen);
+            },
+            child: Container(
+              width: double.infinity,
+              padding: const EdgeInsets.symmetric(vertical: 12),
+              decoration: BoxDecoration(
+                color: const Color(0xFFE8F5E9), // Light green bg
+                borderRadius: BorderRadius.circular(30),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Icon(Icons.file_upload_outlined, color: Color(0xFF43A047), size: 20),
+                  SizedBox(width: 8),
+                  Text(
                     'Upload Image',
                     style: TextStyle(
                       color: Color(0xFF43A047),
@@ -259,8 +259,8 @@ class YourCollectionScreen extends StatelessWidget {
                       fontSize: 14,
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ],
