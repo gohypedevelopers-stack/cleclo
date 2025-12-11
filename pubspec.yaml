@@ -70,6 +70,7 @@ flutter:
   assets:
     - assets/images/
     - assets/files/
+    - assets/data/
     - assets/files/women/
     - assets/files/men/
     - assets/files/kids/
