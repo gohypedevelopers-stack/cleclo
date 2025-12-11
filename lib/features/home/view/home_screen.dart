@@ -315,7 +315,8 @@ class HomeScreen extends StatelessWidget {
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
-              context.push(RouteConstants.bookServiceScreen);
+              final label = services[index]['label'] as String;
+              context.push('${RouteConstants.bookServiceScreen}?category=$label');
             },
             child: Container(
               decoration: BoxDecoration(

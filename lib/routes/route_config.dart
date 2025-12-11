@@ -63,7 +63,10 @@ final GoRouter appRouter = GoRouter(
     GoRoute(
       path: RouteConstants.bookServiceScreen,
       name: RouteConstants.bookServiceScreen,
-      builder: (context, state) => const BookServiceScreen(),
+      builder: (context, state) {
+        final category = state.uri.queryParameters['category'] ?? 'Women';
+        return BookServiceScreen(initialCategory: category);
+      },
     ),
     GoRoute(
       path: RouteConstants.bottomNavBarScreen,
