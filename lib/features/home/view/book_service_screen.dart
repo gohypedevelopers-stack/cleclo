@@ -50,13 +50,13 @@ class _BookServiceScreenState extends State<BookServiceScreen> {
     {'name': 'Denim', 'image': 'assets/files/women/w-denim.jpg'},
     {'name': 'Active', 'image': 'assets/files/women/w-active.jpg'},
     {'name': 'Hosiery', 'image': 'assets/files/women/w-Hosiery.jpg'},
-    {'name': 'Swimwear', 'image': 'assets/files/women/w- Swimwear.jpg'},
+    {'name': 'Swim', 'image': 'assets/files/women/w-swim.jpg'},
     {'name': 'Bottoms', 'image': 'assets/files/women/w-Bottoms.jpg'},
     {'name': 'Basics', 'image': 'assets/files/women/w-Basics.jpg'},
     {'name': 'Tops', 'image': 'assets/files/women/w-Tops.jpg'},
     {'name': 'Formal', 'image': 'assets/files/women/w-Formal.jpg'},
-    {'name': 'Ethnic Wear', 'image': 'assets/files/women/w- Ethnic Wear.jpg'},
-    {'name': 'Embellished', 'image': 'assets/files/women/w- Embellished.jpg'},
+    {'name': 'Ethnic Wear', 'image': 'assets/files/women/w-ethnic.jpg'},
+    {'name': 'Embellished', 'image': 'assets/files/women/w-embellished.jpg'},
     {'name': 'Accessories', 'image': 'assets/files/women/w-Accessories.jpg'},
     {'name': 'Outerwear', 'image': 'assets/files/women/w-Outerwear.jpg'},
     {'name': 'Knitwear', 'image': 'assets/files/women/w-Knitwear.jpg'},
@@ -143,134 +143,114 @@ class _BookServiceScreenState extends State<BookServiceScreen> {
     }
   }
 
-  // Women Items for Casual category
+  // ============ WOMEN ITEMS - Per Client Specification ============
+  // Women > Casual (T-Shirt, Shirt, Capri, Slacks, Skirt, Dangree, Jumpsuit, Skirt Long)
   final List<Map<String, dynamic>> _womenCasualItems = [
-    {'name': 'T-Shirt', 'image': 'assets/files/women/w-s-tshirt.png', 'price': 5.00, 'quantity': 0},
-    {'name': 'Capri', 'image': 'assets/files/women/w-s-Capri.png', 'price': 6.00, 'quantity': 0},
-    {'name': 'Shirt', 'image': 'assets/files/women/w-s-Shirt.jpg', 'price': 12.00, 'quantity': 0},
-    {'name': 'Slacks', 'image': 'assets/files/women/w-s-Slacks.jpg', 'price': 12.00, 'quantity': 0},
-    {'name': 'Skirt', 'image': 'assets/files/women/w-s-Skirt.jpg', 'price': 12.00, 'quantity': 0},
-    {'name': 'Dangree', 'image': 'assets/files/women/w-s-Dangree.jpg', 'price': 17.00, 'quantity': 0},
-    {'name': 'Jumpsuit', 'image': 'assets/files/women/w-s-Jumpsuit.jpg', 'price': 12.00, 'quantity': 0},
-    {'name': 'Women Top', 'image': 'assets/files/women/w-s-Women Top.jpg', 'price': 10.00, 'quantity': 0},
+    {'name': 'T-Shirt', 'image': 'assets/files/women/w-s-tshirt.png', 'price': 15.00, 'quantity': 0},
+    {'name': 'Shirt', 'image': 'assets/files/women/w-s-Shirt.jpg', 'price': 20.00, 'quantity': 0},
+    {'name': 'Capri', 'image': 'assets/files/women/w-s-Capri.png', 'price': 18.00, 'quantity': 0},
+    {'name': 'Slacks', 'image': 'assets/files/women/w-s-Slacks.jpg', 'price': 20.00, 'quantity': 0},
+    {'name': 'Skirt', 'image': 'assets/files/women/w-s-Skirt.jpg', 'price': 20.00, 'quantity': 0},
+    {'name': 'Dangree', 'image': 'assets/files/women/w-s-Dangree.jpg', 'price': 30.00, 'quantity': 0},
+    {'name': 'Jumpsuit', 'image': 'assets/files/women/w-s-Jumpsuit.jpg', 'price': 35.00, 'quantity': 0},
+    {'name': 'Skirt Long', 'image': 'assets/files/women/w-s-skirtlong.jpg', 'price': 25.00, 'quantity': 0},
   ];
 
-  // Women Items for Denim category
+  // Women > Denim (Jeans)
   final List<Map<String, dynamic>> _womenDenimItems = [
-    {'name': 'Jeans', 'image': 'assets/files/women/w-s-Jeans.jpg', 'price': 12.00, 'quantity': 0},
-    {'name': 'Dangree', 'image': 'assets/files/women/w-s-Dangree.jpg', 'price': 17.00, 'quantity': 0},
-    {'name': 'Skirt', 'image': 'assets/files/women/w-s-Skirt.jpg', 'price': 12.00, 'quantity': 0},
+    {'name': 'Jeans', 'image': 'assets/files/women/w-s-Jeans.jpg', 'price': 25.00, 'quantity': 0},
   ];
 
-  // Women Items for Active category
+  // Women > Active (Trackpant)
   final List<Map<String, dynamic>> _womenActiveItems = [
-    {'name': 'T-Shirt', 'image': 'assets/files/women/w-s-tshirt.png', 'price': 5.00, 'quantity': 0},
-    {'name': 'Capri', 'image': 'assets/files/women/w-s-Capri.png', 'price': 6.00, 'quantity': 0},
-    {'name': 'Jumpsuit', 'image': 'assets/files/women/w-s-Jumpsuit.jpg', 'price': 12.00, 'quantity': 0},
-    {'name': 'Women Leggings', 'image': 'assets/files/women/w-s-Women Leggings.jpg', 'price': 8.00, 'quantity': 0},
+    {'name': 'Trackpant', 'image': 'assets/files/women/w-s-trackpant.jpg', 'price': 25.00, 'quantity': 0},
   ];
 
-  // Women Items for Hosiery category
+  // Women > Hosiery (Stocking)
   final List<Map<String, dynamic>> _womenHosieryItems = [
-    {'name': 'Stocking', 'image': 'assets/files/women/w-s-Stocking.jpg', 'price': 8.00, 'quantity': 0},
-    {'name': 'Women Leggings', 'image': 'assets/files/women/w-s-Women Leggings.jpg', 'price': 8.00, 'quantity': 0},
-    {'name': 'Capri', 'image': 'assets/files/women/w-s-Capri.png', 'price': 6.00, 'quantity': 0},
+    {'name': 'Stocking', 'image': 'assets/files/women/w-s-Stocking.jpg', 'price': 15.00, 'quantity': 0},
   ];
 
-  // Women Items for Bottoms category
+  // Women > Swim (Swimming Costume, Bikini)
+  final List<Map<String, dynamic>> _womenSwimItems = [
+    {'name': 'Swimming Costume', 'image': 'assets/files/women/w-s-swimcostume.jpg', 'price': 30.00, 'quantity': 0},
+    {'name': 'Bikini', 'image': 'assets/files/women/w-s-Bikini.jpg', 'price': 25.00, 'quantity': 0},
+  ];
+
+  // Women > Bottoms (Women Leggings)
   final List<Map<String, dynamic>> _womenBottomsItems = [
-    {'name': 'Jeans', 'image': 'assets/files/women/w-s-Jeans.jpg', 'price': 12.00, 'quantity': 0},
-    {'name': 'Capri', 'image': 'assets/files/women/w-s-Capri.png', 'price': 6.00, 'quantity': 0},
-    {'name': 'Slacks', 'image': 'assets/files/women/w-s-Slacks.jpg', 'price': 12.00, 'quantity': 0},
-    {'name': 'Skirt', 'image': 'assets/files/women/w-s-Skirt.jpg', 'price': 12.00, 'quantity': 0},
-    {'name': 'Skirt Long', 'image': 'assets/files/women/w-s-Skirt Long.jpg', 'price': 12.00, 'quantity': 0},
-    {'name': 'Women Leggings', 'image': 'assets/files/women/w-s-Women Leggings.jpg', 'price': 8.00, 'quantity': 0},
-    {'name': 'Petticoat', 'image': 'assets/files/women/w-s-Petticoat.jpg', 'price': 10.00, 'quantity': 0},
+    {'name': 'Women Leggings', 'image': 'assets/files/women/w-s-leggings.jpg', 'price': 20.00, 'quantity': 0},
   ];
 
-  // Women Items for Tops category
-  final List<Map<String, dynamic>> _womenTopsItems = [
-    {'name': 'T-Shirt', 'image': 'assets/files/women/w-s-tshirt.png', 'price': 5.00, 'quantity': 0},
-    {'name': 'Shirt', 'image': 'assets/files/women/w-s-Shirt.jpg', 'price': 12.00, 'quantity': 0},
-    {'name': 'Women Top', 'image': 'assets/files/women/w-s-Women Top.jpg', 'price': 10.00, 'quantity': 0},
-    {'name': 'Kameez', 'image': 'assets/files/women/w-s-Kameez.jpg', 'price': 15.00, 'quantity': 0},
-  ];
-
-  // Women Items for Formal category
-  final List<Map<String, dynamic>> _womenFormalItems = [
-    {'name': 'Shirt', 'image': 'assets/files/women/w-s-Shirt.jpg', 'price': 12.00, 'quantity': 0},
-    {'name': 'Slacks', 'image': 'assets/files/women/w-s-Slacks.jpg', 'price': 12.00, 'quantity': 0},
-    {'name': 'Skirt', 'image': 'assets/files/women/w-s-Skirt.jpg', 'price': 12.00, 'quantity': 0},
-    {'name': 'Ladies Suit Western', 'image': 'assets/files/women/w-s-Ladies Suit Western.jpg', 'price': 25.00, 'quantity': 0},
-    {'name': 'Dress', 'image': 'assets/files/women/w-s-Dress.jpg', 'price': 18.00, 'quantity': 0},
-  ];
-
-  // Women Items for Swimwear category
-  final List<Map<String, dynamic>> _womenSwimwearItems = [
-    {'name': 'Bikini', 'image': 'assets/files/women/w-s-Bikini.jpg', 'price': 15.00, 'quantity': 0},
-    {'name': 'Jumpsuit', 'image': 'assets/files/women/w-s-Jumpsuit.jpg', 'price': 12.00, 'quantity': 0},
-  ];
-
-  // Women Items for Basics category
+  // Women > Basics (Petticoat)
   final List<Map<String, dynamic>> _womenBasicsItems = [
-    {'name': 'T-Shirt', 'image': 'assets/files/women/w-s-tshirt.png', 'price': 5.00, 'quantity': 0},
-    {'name': 'Shirt', 'image': 'assets/files/women/w-s-Shirt.jpg', 'price': 12.00, 'quantity': 0},
-    {'name': 'Slacks', 'image': 'assets/files/women/w-s-Slacks.jpg', 'price': 12.00, 'quantity': 0},
-    {'name': 'Women Top', 'image': 'assets/files/women/w-s-Women Top.jpg', 'price': 10.00, 'quantity': 0},
-    {'name': 'Petticoat', 'image': 'assets/files/women/w-s-Petticoat.jpg', 'price': 10.00, 'quantity': 0},
+    {'name': 'Petticoat', 'image': 'assets/files/women/w-s-Petticoat.jpg', 'price': 20.00, 'quantity': 0},
   ];
 
-  // Women Items for Ethnic Wear category
+  // Women > Tops (Women Top)
+  final List<Map<String, dynamic>> _womenTopsItems = [
+    {'name': 'Women Top', 'image': 'assets/files/women/w-s-womentop.jpg', 'price': 20.00, 'quantity': 0},
+  ];
+
+  // Women > Formal (Dress, Gown, Dress Long)
+  final List<Map<String, dynamic>> _womenFormalItems = [
+    {'name': 'Dress', 'image': 'assets/files/women/w-s-Dress.jpg', 'price': 50.00, 'quantity': 0},
+    {'name': 'Gown', 'image': 'assets/files/women/w-s-Gown.jpg', 'price': 100.00, 'quantity': 0},
+    {'name': 'Dress Long', 'image': 'assets/files/women/w-s-dresslong.jpg', 'price': 70.00, 'quantity': 0},
+  ];
+
+  // Women > Ethnic Wear (Kameez, Salwar, Ladies Suit Ethnic, Lehnga, Choli, Saree, Blouse, Sharara, Plazzo)
   final List<Map<String, dynamic>> _womenEthnicWearItems = [
-    {'name': 'Kameez', 'image': 'assets/files/women/w-s-Kameez.jpg', 'price': 15.00, 'quantity': 0},
-    {'name': 'Salwar', 'image': 'assets/files/women/w-s-Salwar.jpg', 'price': 12.00, 'quantity': 0},
-    {'name': 'Lehnga', 'image': 'assets/files/women/w-s-Lehnga.jpg', 'price': 35.00, 'quantity': 0},
-    {'name': 'Dupatta', 'image': 'assets/files/women/w-s-Dupatta.jpg', 'price': 8.00, 'quantity': 0},
-    {'name': 'Gown', 'image': 'assets/files/women/w-s-Gown.jpg', 'price': 30.00, 'quantity': 0},
-    {'name': 'Dress Long', 'image': 'assets/files/women/w-s-Dress Long.jpg', 'price': 22.00, 'quantity': 0},
+    {'name': 'Kameez', 'image': 'assets/files/women/w-s-Kameez.jpg', 'price': 40.00, 'quantity': 0},
+    {'name': 'Salwar', 'image': 'assets/files/women/w-s-Salwar.jpg', 'price': 35.00, 'quantity': 0},
+    {'name': 'Ladies Suit Ethnic', 'image': 'assets/files/women/w-s-ladiesetnicsuit.jpg', 'price': 80.00, 'quantity': 0},
+    {'name': 'Lehnga', 'image': 'assets/files/women/w-s-Lehnga.jpg', 'price': 150.00, 'quantity': 0},
+    {'name': 'Choli', 'image': 'assets/files/women/w-s-choli.jpg', 'price': 50.00, 'quantity': 0},
+    {'name': 'Saree', 'image': 'assets/files/women/w-s-saree.jpg', 'price': 80.00, 'quantity': 0},
+    {'name': 'Blouse', 'image': 'assets/files/women/w-s-blouse.jpg', 'price': 40.00, 'quantity': 0},
+    {'name': 'Sharara', 'image': 'assets/files/women/w-s-sharara.jpg', 'price': 60.00, 'quantity': 0},
+    {'name': 'Plazzo', 'image': 'assets/files/women/w-s-plazzo.jpg', 'price': 45.00, 'quantity': 0},
   ];
 
-  // Women Items for Embellished category
+  // Women > Embellished (Kameez Embellishment, Salwar Embellishment, Plazzo Embellishment, Saree Embellishment, Dress Embellishment)
   final List<Map<String, dynamic>> _womenEmbellishedItems = [
-    {'name': 'Kameez Embellishment', 'image': 'assets/files/women/w-s-Kameez Embellishment.jpg', 'price': 25.00, 'quantity': 0},
-    {'name': 'Salwar Embellishment', 'image': 'assets/files/women/w-s-Salwar Embellishment.jpg', 'price': 20.00, 'quantity': 0},
-    {'name': 'Plazzo Embellishment', 'image': 'assets/files/women/w-s-Plazzo Embellishment.jpg', 'price': 22.00, 'quantity': 0},
-    {'name': 'Lehnga', 'image': 'assets/files/women/w-s-Lehnga.jpg', 'price': 35.00, 'quantity': 0},
-    {'name': 'Gown', 'image': 'assets/files/women/w-s-Gown.jpg', 'price': 30.00, 'quantity': 0},
+    {'name': 'Kameez Embellishment', 'image': 'assets/files/women/w-s-kameezembellish.jpg', 'price': 60.00, 'quantity': 0},
+    {'name': 'Salwar Embellishment', 'image': 'assets/files/women/w-s-salwarembellish.jpg', 'price': 50.00, 'quantity': 0},
+    {'name': 'Plazzo Embellishment', 'image': 'assets/files/women/w-s-plazzoembellish.jpg', 'price': 55.00, 'quantity': 0},
+    {'name': 'Saree Embellishment', 'image': 'assets/files/women/w-s-sareeembellish.jpg', 'price': 100.00, 'quantity': 0},
+    {'name': 'Dress Embellishment', 'image': 'assets/files/women/w-s-dressembellish.jpg', 'price': 80.00, 'quantity': 0},
   ];
 
-  // Women Items for Accessories category
+  // Women > Accessories (Dupatta, Scarf, Handgloves)
   final List<Map<String, dynamic>> _womenAccessoriesItems = [
-    {'name': 'Scarf', 'image': 'assets/files/women/w-s-Scarf.jpg', 'price': 8.00, 'quantity': 0},
-    {'name': 'Dupatta', 'image': 'assets/files/women/w-s-Dupatta.jpg', 'price': 8.00, 'quantity': 0},
-    {'name': 'Handgloves', 'image': 'assets/files/women/w-s-Handgloves.png', 'price': 6.00, 'quantity': 0},
-    {'name': 'Stocking', 'image': 'assets/files/women/w-s-Stocking.jpg', 'price': 8.00, 'quantity': 0},
+    {'name': 'Dupatta', 'image': 'assets/files/women/w-s-Dupatta.jpg', 'price': 30.00, 'quantity': 0},
+    {'name': 'Scarf', 'image': 'assets/files/women/w-s-Scarf.jpg', 'price': 25.00, 'quantity': 0},
+    {'name': 'Handgloves', 'image': 'assets/files/women/w-s-Handgloves.png', 'price': 15.00, 'quantity': 0},
   ];
 
-  // Women Items for Outerwear category
+  // Women > Outerwear (Jacket, Jacket Half, Sports Jacket, Coat, Long Coat, Over Coat, Jacket Long)
   final List<Map<String, dynamic>> _womenOuterwearItems = [
-    {'name': 'Cardigan', 'image': 'assets/files/women/w-s-Cardigan.jpg', 'price': 18.00, 'quantity': 0},
-    {'name': 'Jumper', 'image': 'assets/files/women/w-s-Jumper.jpg', 'price': 20.00, 'quantity': 0},
-    {'name': 'Pullover', 'image': 'assets/files/women/w-s-Pullover.jpg', 'price': 15.00, 'quantity': 0},
-    {'name': 'Jumpsuit', 'image': 'assets/files/women/w-s-Jumpsuit.jpg', 'price': 12.00, 'quantity': 0},
+    {'name': 'Jacket', 'image': 'assets/files/women/w-s-jacket.jpg', 'price': 80.00, 'quantity': 0},
+    {'name': 'Jacket Half', 'image': 'assets/files/women/w-s-jackethalf.jpg', 'price': 60.00, 'quantity': 0},
+    {'name': 'Sports Jacket', 'image': 'assets/files/women/w-s-sportsjacket.jpg', 'price': 70.00, 'quantity': 0},
+    {'name': 'Coat', 'image': 'assets/files/women/w-s-coat.jpg', 'price': 100.00, 'quantity': 0},
+    {'name': 'Long Coat', 'image': 'assets/files/women/w-s-longcoat.jpg', 'price': 150.00, 'quantity': 0},
+    {'name': 'Over Coat', 'image': 'assets/files/women/w-s-overcoat.jpg', 'price': 120.00, 'quantity': 0},
+    {'name': 'Jacket Long', 'image': 'assets/files/women/w-s-jacketlong.jpg', 'price': 90.00, 'quantity': 0},
   ];
 
-  // Women Items for Knitwear category
+  // Women > Knitwear (Pullover, Cardigan, Jumper)
   final List<Map<String, dynamic>> _womenKnitwearItems = [
-    {'name': 'Cardigan', 'image': 'assets/files/women/w-s-Cardigan.jpg', 'price': 18.00, 'quantity': 0},
-    {'name': 'Pullover', 'image': 'assets/files/women/w-s-Pullover.jpg', 'price': 15.00, 'quantity': 0},
-    {'name': 'Jumper', 'image': 'assets/files/women/w-s-Jumper.jpg', 'price': 20.00, 'quantity': 0},
-    {'name': 'Scarf', 'image': 'assets/files/women/w-s-Scarf.jpg', 'price': 8.00, 'quantity': 0},
+    {'name': 'Pullover', 'image': 'assets/files/women/w-s-Pullover.jpg', 'price': 45.00, 'quantity': 0},
+    {'name': 'Cardigan', 'image': 'assets/files/women/w-s-Cardigan.jpg', 'price': 50.00, 'quantity': 0},
+    {'name': 'Jumper', 'image': 'assets/files/women/w-s-Jumper.jpg', 'price': 55.00, 'quantity': 0},
   ];
 
-  // Women Items for Western category
+  // Women > Western (Ladies Suit Western)
   final List<Map<String, dynamic>> _womenWesternItems = [
-    {'name': 'Jeans', 'image': 'assets/files/women/w-s-Jeans.jpg', 'price': 12.00, 'quantity': 0},
-    {'name': 'T-Shirt', 'image': 'assets/files/women/w-s-tshirt.png', 'price': 5.00, 'quantity': 0},
-    {'name': 'Ladies Suit Western', 'image': 'assets/files/women/w-s-Ladies Suit Western.jpg', 'price': 25.00, 'quantity': 0},
-    {'name': 'Dress', 'image': 'assets/files/women/w-s-Dress.jpg', 'price': 18.00, 'quantity': 0},
-    {'name': 'Skirt', 'image': 'assets/files/women/w-s-Skirt.jpg', 'price': 12.00, 'quantity': 0},
+    {'name': 'Ladies Suit Western', 'image': 'assets/files/women/w-s-ladieswesternsuit.jpg', 'price': 120.00, 'quantity': 0},
   ];
+
 
   // ============ MEN ITEMS ============
   final List<Map<String, dynamic>> _menCasualItems = [
@@ -490,7 +470,7 @@ class _BookServiceScreenState extends State<BookServiceScreen> {
           case 'Bottoms': return _womenBottomsItems;
           case 'Tops': return _womenTopsItems;
           case 'Formal': return _womenFormalItems;
-          case 'Swimwear': return _womenSwimwearItems;
+          case 'Swim': return _womenSwimItems;
           case 'Basics': return _womenBasicsItems;
           case 'Ethnic Wear': return _womenEthnicWearItems;
           case 'Embellished': return _womenEmbellishedItems;
