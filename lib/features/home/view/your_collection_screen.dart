@@ -154,7 +154,7 @@ class YourCollectionScreen extends StatelessWidget {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      // Navigate to next step
+                      context.push(RouteConstants.uploadImageScreen);
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFF43A047), // Green
