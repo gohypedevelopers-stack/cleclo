@@ -1,6 +1,4 @@
-import 'package:cleclo/utils/images/images.dart';
 import 'package:cleclo/routes/route_constants.dart';
-import 'package:cleclo/utils/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -12,54 +10,55 @@ class BookServiceScreen extends StatefulWidget {
 }
 
 class _BookServiceScreenState extends State<BookServiceScreen> {
-  String _selectedCategory = 'Men';
-  
-  // Mock data for items
-  final List<Map<String, dynamic>> _items = [
-    {
-      'image': Images.tShirt,
-      'name': 'T-Shirt',
-      'price': 5.00,
-      'service': 'Dry Clean',
-      'quantity': 0,
-    },
-    {
-      'image': Images.capri,
-      'name': 'Capri',
-      'price': 6.00,
-      'service': 'Wash & Iron',
-      'quantity': 0,
-    },
-    {
-      'image': Images.shorts,
-      'name': 'Shorts',
-      'price': 12.00,
-      'service': 'Dry Clean',
-      'quantity': 0,
-    },
-    {
-      'image': Images.jeans,
-      'name': 'Jeans',
-      'price': 12.00,
-      'service': 'Dry Clean',
-      'quantity': 0,
-    },
-    {
-      'image': Images.cargoPants,
-      'name': 'Cargo Pants',
-      'price': 12.00,
-      'service': 'Dry Clean',
-      'quantity': 0,
-    },
+  String _selectedMainCategory = 'Women';
+  String _selectedSubCategory = 'Casual';
+
+  // Women Categories with images (w-xx.jpg format)
+  final List<Map<String, String>> _womenCategories = [
+    {'name': 'Casual', 'image': 'assets/files/women/w-casual.png'},
+    {'name': 'Denim', 'image': 'assets/files/women/w-denim.jpg'},
+    {'name': 'Active', 'image': 'assets/files/women/w-active.jpg'},
+    {'name': 'Hosiery', 'image': 'assets/files/women/w-Hosiery.jpg'},
+    {'name': 'Swimwear', 'image': 'assets/files/women/w- Swimwear.jpg'},
+    {'name': 'Bottoms', 'image': 'assets/files/women/w-Bottoms.jpg'},
+    {'name': 'Basics', 'image': 'assets/files/women/w-Basics.jpg'},
+    {'name': 'Tops', 'image': 'assets/files/women/w-Tops.jpg'},
+    {'name': 'Formal', 'image': 'assets/files/women/w-Formal.jpg'},
+    {'name': 'Ethnic Wear', 'image': 'assets/files/women/w- Ethnic Wear.jpg'},
+    {'name': 'Embellished', 'image': 'assets/files/women/w- Embellished.jpg'},
+    {'name': 'Accessories', 'image': 'assets/files/women/w-Accessories.jpg'},
+    {'name': 'Outerwear', 'image': 'assets/files/women/w-Outerwear.jpg'},
+    {'name': 'Knitwear', 'image': 'assets/files/women/w-Knitwear.jpg'},
+    {'name': 'Western', 'image': 'assets/files/women/w-Western.jpg'},
   ];
+
+  // Women Items for Casual category (w-s-xxx.jpg format)
+  final List<Map<String, dynamic>> _womenCasualItems = [
+    {'name': 'T-Shirt', 'image': 'assets/files/women/w-s-tshirt.png', 'price': 5.00, 'quantity': 0},
+    {'name': 'Capri', 'image': 'assets/files/women/w-s-Capri.png', 'price': 6.00, 'quantity': 0},
+    {'name': 'Shirt', 'image': 'assets/files/women/w-s-Shirt.jpg', 'price': 12.00, 'quantity': 0},
+    {'name': 'Slacks', 'image': 'assets/files/women/w-s-Slacks.jpg', 'price': 12.00, 'quantity': 0},
+    {'name': 'Skirt', 'image': 'assets/files/women/w-s-Skirt.jpg', 'price': 12.00, 'quantity': 0},
+    {'name': 'Dangree', 'image': 'assets/files/women/w-s-Dangree.jpg', 'price': 17.00, 'quantity': 0},
+    {'name': 'Jumpsuit', 'image': 'assets/files/women/w-s-Jumpsuit.jpg', 'price': 12.00, 'quantity': 0},
+    {'name': 'Skirt Long', 'image': 'assets/files/women/w-s-Skirt Long.jpg', 'price': 12.00, 'quantity': 0},
+  ];
+
+  List<Map<String, dynamic>> get _currentItems {
+    // For now, return casual items for Women category
+    if (_selectedMainCategory == 'Women') {
+      return _womenCasualItems;
+    }
+    return _womenCasualItems; // Default
+  }
 
   @override
   Widget build(BuildContext context) {
-    int selectedCount = _items.fold(0, (sum, item) => sum + (item['quantity'] as int));
-    double totalAmount = _items.fold(0, (sum, item) => sum + (item['quantity'] as int) * (item['price'] as double));
+    int selectedCount = _currentItems.fold(0, (sum, item) => sum + (item['quantity'] as int));
+    double totalAmount = _currentItems.fold(0, (sum, item) => sum + (item['quantity'] as int) * (item['price'] as double));
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF8F9FA), // Light grey background
+      backgroundColor: const Color(0xFFF8F9FA),
       appBar: AppBar(
         backgroundColor: const Color(0xFFF8F9FA),
         elevation: 0,
@@ -88,6 +87,7 @@ class _BookServiceScreenState extends State<BookServiceScreen> {
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(25),
+                border: Border.all(color: Colors.grey.shade200),
               ),
               child: Row(
                 children: const [
@@ -105,90 +105,161 @@ class _BookServiceScreenState extends State<BookServiceScreen> {
             ),
           ),
 
-          // Categories (Men, Women, etc.)
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            child: Row(
-              children: ['Men', 'Women', 'Kids', 'Household', 'Institutions'].map((category) {
-                final isSelected = _selectedCategory == category;
-                return Padding(
-                  padding: const EdgeInsets.only(right: 12),
-                  child: GestureDetector(
-                    onTap: () => setState(() => _selectedCategory = category),
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 10),
-                      decoration: BoxDecoration(
-                        color: isSelected ? const Color(0xFFE8F5E9) : Colors.white,
-                        borderRadius: BorderRadius.circular(20),
-                        border: Border.all(
-                          color: isSelected ? const Color(0xFF43A047) : Colors.grey.shade200,
+          // Main Categories (Men, Women, Kids, Household, Institutions, Others)
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: ['Men', 'Women', 'Kids', 'Household', 'Institutions', 'Others'].map((category) {
+                  final isSelected = _selectedMainCategory == category;
+                  return Padding(
+                    padding: const EdgeInsets.only(right: 12),
+                    child: GestureDetector(
+                      onTap: () => setState(() => _selectedMainCategory = category),
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                        decoration: BoxDecoration(
+                          color: Colors.transparent,
+                          borderRadius: BorderRadius.circular(20),
+                          border: isSelected 
+                            ? Border.all(color: const Color(0xFF43A047), width: 1.5)
+                            : null,
                         ),
-                      ),
-                      child: Text(
-                        category,
-                        style: TextStyle(
-                          color: isSelected ? const Color(0xFF1B5E20) : Colors.black87,
-                          fontWeight: FontWeight.w600,
+                        child: Text(
+                          category,
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
+                            color: isSelected ? const Color(0xFF43A047) : Colors.black54,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                );
-              }).toList(),
+                  );
+                }).toList(),
+              ),
             ),
           ),
 
-          // Sub-Categories (Casual, Formal, Ethnic)
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            child: Row(
-              children: [
-                _buildSubCategoryItem('Casual Wear', Images.casualWear, true),
-                _buildSubCategoryItem('Formal Wear', Images.formalWear, false),
-                _buildSubCategoryItem('Ethnic Wear', Images.ethnicWear, false),
-                _buildSubCategoryItem('T-Shirt', Images.tShirt, false),
-                _buildSubCategoryItem('Jeans', Images.jeans, false),
-              ],
+          // Sub-Categories (Horizontal scroll with images) - Women categories
+          if (_selectedMainCategory == 'Women')
+            SizedBox(
+              height: 140,
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                itemCount: _womenCategories.length,
+                itemBuilder: (context, index) {
+                  final category = _womenCategories[index];
+                  final isSelected = _selectedSubCategory == category['name'];
+                  return GestureDetector(
+                    onTap: () => setState(() => _selectedSubCategory = category['name']!),
+                    child: Container(
+                      width: 95,
+                      margin: const EdgeInsets.only(right: 12),
+                      padding: const EdgeInsets.all(6),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(16),
+                        border: Border.all(
+                          color: isSelected 
+                              ? const Color(0xFF43A047) 
+                              : const Color(0xFFE8E8E8),
+                          width: isSelected ? 2 : 1,
+                        ),
+                      ),
+                      child: Column(
+                        children: [
+                          // Image container inside the bordered card
+                          Expanded(
+                            child: Container(
+                              width: double.infinity,
+                              decoration: BoxDecoration(
+                                color: const Color(0xFFF5F5F5),
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(12),
+                                child: Image.asset(
+                                  category['image']!,
+                                  fit: BoxFit.cover,
+                                  errorBuilder: (context, error, stackTrace) {
+                                    return const Center(
+                                      child: Icon(Icons.image, color: Colors.grey),
+                                    );
+                                  },
+                                ),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(height: 6),
+                          // Label inside the bordered card
+                          Text(
+                            category['name']!,
+                            textAlign: TextAlign.center,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: const TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.black87,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              ),
             ),
-          ),
 
           // Items List
           Expanded(
             child: ListView.builder(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-              itemCount: _items.length,
+              itemCount: _currentItems.length,
               itemBuilder: (context, index) {
-                final item = _items[index];
+                final item = _currentItems[index];
                 return Container(
-                  margin: const EdgeInsets.only(bottom: 16),
-                  padding: const EdgeInsets.all(12),
+                  margin: const EdgeInsets.only(bottom: 12),
+                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(16),
                     boxShadow: [
                       BoxShadow(
                         color: Colors.black.withOpacity(0.03),
-                        blurRadius: 10,
-                        offset: const Offset(0, 4),
+                        blurRadius: 8,
+                        offset: const Offset(0, 2),
                       ),
                     ],
                   ),
                   child: Row(
                     children: [
-                      // Image
+                      // Item Image
                       Container(
-                        width: 60,
-                        height: 60,
+                        width: 50,
+                        height: 50,
                         decoration: BoxDecoration(
                           color: const Color(0xFFF5F5F5),
-                          borderRadius: BorderRadius.circular(12),
+                          borderRadius: BorderRadius.circular(10),
                         ),
-                        child: Image.asset(item['image'], fit: BoxFit.contain),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: Image.asset(
+                            item['image'],
+                            fit: BoxFit.cover,
+                            errorBuilder: (context, error, stackTrace) {
+                              return const Center(
+                                child: Icon(Icons.image, color: Colors.grey, size: 24),
+                              );
+                            },
+                          ),
+                        ),
                       ),
-                      const SizedBox(width: 16),
-                      // Details
+                      const SizedBox(width: 14),
+                      // Item Details
                       Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -196,22 +267,19 @@ class _BookServiceScreenState extends State<BookServiceScreen> {
                             Text(
                               item['name'],
                               style: const TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
+                                fontSize: 15,
+                                fontWeight: FontWeight.w600,
                                 color: Color(0xFF1B5E20),
                               ),
                             ),
-                            const SizedBox(height: 4),
-                            Row(
-                              children: [
-                                Text(
-                                  '₹${item['price'].toStringAsFixed(2)}',
-                                  style: const TextStyle(
-                                    color: Color(0xFF43A047),
-                                    fontWeight: FontWeight.w600,
-                                  ),
-                                ),
-                              ],
+                            const SizedBox(height: 2),
+                            Text(
+                              '₹${item['price'].toStringAsFixed(2)}',
+                              style: const TextStyle(
+                                fontSize: 13,
+                                color: Color(0xFF43A047),
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
                           ],
                         ),
@@ -228,13 +296,13 @@ class _BookServiceScreenState extends State<BookServiceScreen> {
                             },
                           ),
                           SizedBox(
-                            width: 30,
+                            width: 32,
                             child: Text(
                               '${item['quantity']}',
                               textAlign: TextAlign.center,
                               style: const TextStyle(
                                 fontWeight: FontWeight.bold,
-                                fontSize: 16,
+                                fontSize: 15,
                               ),
                             ),
                           ),
@@ -305,7 +373,7 @@ class _BookServiceScreenState extends State<BookServiceScreen> {
                       elevation: 0,
                     ),
                     child: const Text(
-                      'Select items',
+                      'Select Items',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 16,
@@ -322,62 +390,18 @@ class _BookServiceScreenState extends State<BookServiceScreen> {
     );
   }
 
-  Widget _buildSubCategoryItem(String label, String image, bool isSelected) {
-    return Container(
-      width: 100,
-      margin: const EdgeInsets.only(right: 12),
-      padding: const EdgeInsets.all(8),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(16),
-        border: isSelected ? Border.all(color: const Color(0xFF43A047), width: 1.5) : null,
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.05),
-            blurRadius: 10,
-            offset: const Offset(0, 4),
-          ),
-        ],
-      ),
-      child: Column(
-        children: [
-          Container(
-            height: 80,
-            decoration: BoxDecoration(
-              color: const Color(0xFFF5F5F5),
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: Center(
-              child: Image.asset(image, fit: BoxFit.contain),
-            ),
-          ),
-          const SizedBox(height: 8),
-          Text(
-            label,
-            textAlign: TextAlign.center,
-            style: const TextStyle(
-              fontSize: 12,
-              fontWeight: FontWeight.w600,
-              color: Color(0xFF1B5E20),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
   Widget _buildCounterButton({required IconData icon, required VoidCallback onTap, bool isAdd = false}) {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.all(4),
+        padding: const EdgeInsets.all(6),
         decoration: BoxDecoration(
           color: isAdd ? const Color(0xFF43A047) : const Color(0xFFF5F5F5),
           shape: BoxShape.circle,
         ),
         child: Icon(
           icon,
-          size: 20,
+          size: 18,
           color: isAdd ? Colors.white : Colors.grey,
         ),
       ),
