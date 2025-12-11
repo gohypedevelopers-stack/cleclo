@@ -4,37 +4,14 @@ import 'package:go_router/go_router.dart';
 import 'package:cleclo/routes/route_constants.dart';
 
 class YourCollectionScreen extends StatelessWidget {
-  const YourCollectionScreen({super.key});
+  final List<Map<String, dynamic>> selectedItems;
+  
+  const YourCollectionScreen({super.key, required this.selectedItems});
 
   @override
   Widget build(BuildContext context) {
-    // Mock data for UI development
-    final List<Map<String, dynamic>> selectedItems = [
-      {'name': 'T-Shirt', 'qty': 2, 'price': 40},
-      {'name': 'Saree/Dress', 'qty': 1, 'price': 40},
-      {'name': 'Jeans', 'qty': 3, 'price': 90},
-      {'name': 'Bedsheet', 'qty': 1, 'price': 50},
-    ];
-
-    int totalItems = selectedItems.fold(0, (sum, item) => sum + (item['qty'] as int));
-    int totalPrice = selectedItems.fold(0, (sum, item) => sum + ((item['price'] as int) * (item['qty'] as int)));
-    // Wait, the image shows Total: 220. 
-    // 2*40 + 1*40 + 3*90 + 1*50 = 80 + 40 + 270 + 50 = 440. 
-    // The image calculation might be different or I misread prices.
-    // Image says: T-Shirt 40, Saree/Dress 40, Jeans 90, Bedsheet 50.
-    // Total 220. 
-    // Maybe the prices are unit prices but total is sum of unit prices? No.
-    // Maybe details in image are specific. 
-    // Let's stick to the visual structure. The total calc logic can be fixed later. 
-    // Actually, looking at image: 40 + 40 + 90 + 50 = 220. 
-    // So the total shown is just the sum of the displayed prices on the right, regardless of Quantity?
-    // OR the prices shown ARE the totals for that line item? 
-    // T-Shirt Qty 2, Price 40 (Unit 20?). 
-    // Saree Qty 1, Price 40.
-    // Jeans Qty 3, Price 90 (Unit 30?).
-    // Bedsheet Qty 1, Price 50.
-    // 40+40+90+50 = 220. 
-    // Yes, the displayed price is the LINE TOTAL. 
+    int totalItems = selectedItems.fold(0, (sum, item) => sum + (item['quantity'] as int));
+    double totalPrice = selectedItems.fold(0.0, (sum, item) => sum + ((item['price'] as double) * (item['quantity'] as int)));
     
     return Scaffold(
       backgroundColor: const Color(0xFFF8F9FA),
@@ -215,7 +192,7 @@ class YourCollectionScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    'Qty: ${item['qty']}',
+                    'Qty: ${item['quantity']}',
                     style: TextStyle(
                       fontSize: 14,
                       color: Colors.grey.shade500,
@@ -224,7 +201,7 @@ class YourCollectionScreen extends StatelessWidget {
                 ],
               ),
               Text(
-                '₹${item['price']}',
+                '₹${((item['price'] as double) * (item['quantity'] as int)).toStringAsFixed(0)}',
                 style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,

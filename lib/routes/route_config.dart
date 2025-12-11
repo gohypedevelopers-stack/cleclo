@@ -96,7 +96,10 @@ final GoRouter appRouter = GoRouter(
     GoRoute(
       path: RouteConstants.yourCollectionScreen,
       name: RouteConstants.yourCollectionScreen,
-      builder: (context, state) => const YourCollectionScreen(),
+      builder: (context, state) {
+        final selectedItems = state.extra as List<Map<String, dynamic>>? ?? [];
+        return YourCollectionScreen(selectedItems: selectedItems);
+      },
     ),
     GoRoute(
       path: RouteConstants.uploadImageScreen,

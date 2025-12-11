@@ -899,7 +899,14 @@ class _BookServiceScreenState extends State<BookServiceScreen> {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      context.push(RouteConstants.yourCollectionScreen);
+                      // Get only items with quantity > 0
+                      final selectedItemsList = _currentItems
+                          .where((item) => (item['quantity'] as int) > 0)
+                          .toList();
+                      context.push(
+                        RouteConstants.yourCollectionScreen,
+                        extra: selectedItemsList,
+                      );
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFF43A047),
