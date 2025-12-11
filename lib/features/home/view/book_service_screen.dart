@@ -28,16 +28,16 @@ class _BookServiceScreenState extends State<BookServiceScreen> {
         _selectedSubCategory = 'Casual';
         break;
       case 'Kids':
-        _selectedSubCategory = 'Boys';
+        _selectedSubCategory = 'Casual';
         break;
       case 'Household':
         _selectedSubCategory = 'Bedding';
         break;
       case 'Institutions':
-        _selectedSubCategory = 'Hotels';
+        _selectedSubCategory = 'Bedding';
         break;
       case 'Others':
-        _selectedSubCategory = 'Footwear';
+        _selectedSubCategory = 'Outerwear';
         break;
       default:
         _selectedSubCategory = 'Casual';
@@ -63,53 +63,64 @@ class _BookServiceScreenState extends State<BookServiceScreen> {
     {'name': 'Western', 'image': 'assets/files/women/w-Western.jpg'},
   ];
 
-  // Men Categories - Add your images to assets/files/men folder
+  // Men Categories
   final List<Map<String, String>> _menCategories = [
     {'name': 'Casual', 'image': 'assets/files/men/m-casual.jpg'},
+    {'name': 'Nightwear', 'image': 'assets/files/men/m-nightwear.jpg'},
+    {'name': 'Active', 'image': 'assets/files/men/m-active.jpg'},
+    {'name': 'Home', 'image': 'assets/files/men/m-home.jpg'},
+    {'name': 'Innerwear', 'image': 'assets/files/men/m-innerwear.jpg'},
+    {'name': 'Swim', 'image': 'assets/files/men/m-swim.jpg'},
     {'name': 'Formal', 'image': 'assets/files/men/m-formal.jpg'},
-    {'name': 'Denim', 'image': 'assets/files/men/m-denim.jpg'},
-    {'name': 'Sports', 'image': 'assets/files/men/m-sports.jpg'},
     {'name': 'Ethnic', 'image': 'assets/files/men/m-ethnic.jpg'},
-    {'name': 'Accessories', 'image': 'assets/files/men/m-accessories.jpg'},
-    {'name': 'Outerwear', 'image': 'assets/files/men/m-outerwear.jpg'},
     {'name': 'Knitwear', 'image': 'assets/files/men/m-knitwear.jpg'},
+    {'name': 'Outerwear', 'image': 'assets/files/men/m-outerwear.jpg'},
+    {'name': 'Accessories', 'image': 'assets/files/men/m-accessories.jpg'},
+    {'name': 'Sports', 'image': 'assets/files/men/m-sports.jpg'},
   ];
 
-  // Kids Categories - Add your images to assets/files/kids folder
+  // Kids Categories
   final List<Map<String, String>> _kidsCategories = [
-    {'name': 'Boys', 'image': 'assets/files/kids/k-boys.jpg'},
-    {'name': 'Girls', 'image': 'assets/files/kids/k-girls.jpg'},
-    {'name': 'Infants', 'image': 'assets/files/kids/k-infants.jpg'},
-    {'name': 'School Uniform', 'image': 'assets/files/kids/k-school.jpg'},
-    {'name': 'Party Wear', 'image': 'assets/files/kids/k-party.jpg'},
+    {'name': 'Casual', 'image': 'assets/files/kids/k-casual.jpg'},
+    {'name': 'Ethnic', 'image': 'assets/files/kids/k-ethnic.jpg'},
+    {'name': 'Nightwear', 'image': 'assets/files/kids/k-nightwear.jpg'},
+    {'name': 'Active', 'image': 'assets/files/kids/k-active.jpg'},
+    {'name': 'Sports', 'image': 'assets/files/kids/k-sports.jpg'},
+    {'name': 'Knitwear', 'image': 'assets/files/kids/k-knitwear.jpg'},
+    {'name': 'Outerwear', 'image': 'assets/files/kids/k-outerwear.jpg'},
+    {'name': 'Formal', 'image': 'assets/files/kids/k-formal.jpg'},
+    {'name': 'Swim', 'image': 'assets/files/kids/k-swim.jpg'},
+    {'name': 'Accessories', 'image': 'assets/files/kids/k-accessories.jpg'},
   ];
 
-  // Household Categories - Add your images to assets/files/household folder
+  // Household Categories
   final List<Map<String, String>> _householdCategories = [
     {'name': 'Bedding', 'image': 'assets/files/household/h-bedding.jpg'},
-    {'name': 'Curtains', 'image': 'assets/files/household/h-curtains.jpg'},
+    {'name': 'Furnishing', 'image': 'assets/files/household/h-furnishing.jpg'},
     {'name': 'Towels', 'image': 'assets/files/household/h-towels.jpg'},
-    {'name': 'Table Linen', 'image': 'assets/files/household/h-table.jpg'},
-    {'name': 'Upholstery', 'image': 'assets/files/household/h-upholstery.jpg'},
-    {'name': 'Rugs & Carpets', 'image': 'assets/files/household/h-rugs.jpg'},
+    {'name': 'Dining', 'image': 'assets/files/household/h-dining.jpg'},
+    {'name': 'Accessories', 'image': 'assets/files/household/h-accessories.jpg'},
+    {'name': 'Linens', 'image': 'assets/files/household/h-linens.jpg'},
+    {'name': 'Floors', 'image': 'assets/files/household/h-floors.jpg'},
+    {'name': 'Hosiery', 'image': 'assets/files/household/h-hosiery.jpg'},
+    {'name': 'Window', 'image': 'assets/files/household/h-window.jpg'},
   ];
 
-  // Institutions Categories - Add your images to assets/files/institutions folder
+  // Institutional Categories
   final List<Map<String, String>> _institutionsCategories = [
-    {'name': 'Hotels', 'image': 'assets/files/institutions/i-hotels.jpg'},
-    {'name': 'Hospitals', 'image': 'assets/files/institutions/i-hospitals.jpg'},
-    {'name': 'Restaurants', 'image': 'assets/files/institutions/i-restaurants.jpg'},
-    {'name': 'Schools', 'image': 'assets/files/institutions/i-schools.jpg'},
-    {'name': 'Offices', 'image': 'assets/files/institutions/i-offices.jpg'},
+    {'name': 'Bedding', 'image': 'assets/files/institutions/i-bedding.jpg'},
+    {'name': 'Towels', 'image': 'assets/files/institutions/i-towels.jpg'},
+    {'name': 'Furnishing', 'image': 'assets/files/institutions/i-furnishing.jpg'},
+    {'name': 'Floors', 'image': 'assets/files/institutions/i-floors.jpg'},
+    {'name': 'Dining', 'image': 'assets/files/institutions/i-dining.jpg'},
   ];
 
-  // Others Categories - Add your images to assets/files/others folder
+  // Others Categories
   final List<Map<String, String>> _othersCategories = [
-    {'name': 'Footwear', 'image': 'assets/files/others/o-footwear.jpg'},
-    {'name': 'Bags', 'image': 'assets/files/others/o-bags.jpg'},
+    {'name': 'Outerwear', 'image': 'assets/files/others/o-outerwear.jpg'},
+    {'name': 'Accessories', 'image': 'assets/files/others/o-accessories.jpg'},
+    {'name': 'Auto', 'image': 'assets/files/others/o-auto.jpg'},
     {'name': 'Toys', 'image': 'assets/files/others/o-toys.jpg'},
-    {'name': 'Pet Items', 'image': 'assets/files/others/o-pet.jpg'},
-    {'name': 'Specialty', 'image': 'assets/files/others/o-specialty.jpg'},
   ];
 
   // Get current categories based on selected main category
@@ -262,108 +273,210 @@ class _BookServiceScreenState extends State<BookServiceScreen> {
   ];
 
   // ============ MEN ITEMS ============
-  // Men Items for Casual category
   final List<Map<String, dynamic>> _menCasualItems = [
-    {'name': 'T-Shirt', 'image': 'assets/files/men/m-s-tshirt.jpg', 'price': 5.00, 'quantity': 0},
-    {'name': 'Polo Shirt', 'image': 'assets/files/men/m-s-polo.jpg', 'price': 8.00, 'quantity': 0},
-    {'name': 'Shorts', 'image': 'assets/files/men/m-s-shorts.jpg', 'price': 6.00, 'quantity': 0},
-    {'name': 'Chinos', 'image': 'assets/files/men/m-s-chinos.jpg', 'price': 10.00, 'quantity': 0},
+    {'name': 'T-Shirt', 'image': 'assets/files/men/m-s-tshirt.jpg', 'price': 20.00, 'quantity': 0},
+    {'name': 'Jeans', 'image': 'assets/files/men/m-s-jeans.jpg', 'price': 30.00, 'quantity': 0},
+    {'name': 'Shorts', 'image': 'assets/files/men/m-s-shorts.jpg', 'price': 25.00, 'quantity': 0},
+    {'name': 'Capri', 'image': 'assets/files/men/m-s-capri.jpg', 'price': 25.00, 'quantity': 0},
+    {'name': 'Cargo Pants', 'image': 'assets/files/men/m-s-cargo.jpg', 'price': 35.00, 'quantity': 0},
   ];
-
-  // Men Items for Formal category
+  final List<Map<String, dynamic>> _menNightwearItems = [
+    {'name': 'Pyjama', 'image': 'assets/files/men/m-s-pyjama.jpg', 'price': 20.00, 'quantity': 0},
+  ];
+  final List<Map<String, dynamic>> _menActiveItems = [
+    {'name': 'Sweatpants', 'image': 'assets/files/men/m-s-sweatpants.jpg', 'price': 25.00, 'quantity': 0},
+    {'name': 'Trackpants', 'image': 'assets/files/men/m-s-trackpants.jpg', 'price': 25.00, 'quantity': 0},
+    {'name': 'Sweatshirt', 'image': 'assets/files/men/m-s-sweatshirt.jpg', 'price': 30.00, 'quantity': 0},
+    {'name': 'Track Suit', 'image': 'assets/files/men/m-s-tracksuit.jpg', 'price': 50.00, 'quantity': 0},
+  ];
+  final List<Map<String, dynamic>> _menHomeItems = [
+    {'name': 'Bathrobe', 'image': 'assets/files/men/m-s-bathrobe.jpg', 'price': 40.00, 'quantity': 0},
+    {'name': 'Napkin', 'image': 'assets/files/men/m-s-napkin.jpg', 'price': 10.00, 'quantity': 0},
+  ];
+  final List<Map<String, dynamic>> _menInnerwearItems = [
+    {'name': 'Undershirt', 'image': 'assets/files/men/m-s-undershirt.jpg', 'price': 15.00, 'quantity': 0},
+  ];
+  final List<Map<String, dynamic>> _menSwimItems = [
+    {'name': 'Swimming Costume', 'image': 'assets/files/men/m-s-swimwear.jpg', 'price': 30.00, 'quantity': 0},
+  ];
   final List<Map<String, dynamic>> _menFormalItems = [
-    {'name': 'Shirt', 'image': 'assets/files/men/m-s-shirt.jpg', 'price': 12.00, 'quantity': 0},
-    {'name': 'Trousers', 'image': 'assets/files/men/m-s-trousers.jpg', 'price': 12.00, 'quantity': 0},
-    {'name': 'Suit', 'image': 'assets/files/men/m-s-suit.jpg', 'price': 35.00, 'quantity': 0},
-    {'name': 'Blazer', 'image': 'assets/files/men/m-s-blazer.jpg', 'price': 25.00, 'quantity': 0},
-    {'name': 'Tie', 'image': 'assets/files/men/m-s-tie.jpg', 'price': 5.00, 'quantity': 0},
+    {'name': 'Pants / Trouser', 'image': 'assets/files/men/m-s-trousers.jpg', 'price': 35.00, 'quantity': 0},
+    {'name': 'Shirt', 'image': 'assets/files/men/m-s-shirt.jpg', 'price': 30.00, 'quantity': 0},
+    {'name': 'Blazer', 'image': 'assets/files/men/m-s-blazer.jpg', 'price': 80.00, 'quantity': 0},
+    {'name': 'Suit (2 Pc)', 'image': 'assets/files/men/m-s-suit2pc.jpg', 'price': 150.00, 'quantity': 0},
+    {'name': 'Suit (3 Pc)', 'image': 'assets/files/men/m-s-suit3pc.jpg', 'price': 200.00, 'quantity': 0},
+    {'name': 'Safari Suit', 'image': 'assets/files/men/m-s-safari.jpg', 'price': 120.00, 'quantity': 0},
+    {'name': 'Waist Coat', 'image': 'assets/files/men/m-s-waistcoat.jpg', 'price': 60.00, 'quantity': 0},
+    {'name': 'Achkan', 'image': 'assets/files/men/m-s-achkan.jpg', 'price': 150.00, 'quantity': 0},
+    {'name': 'Sherwani', 'image': 'assets/files/men/m-s-sherwani.jpg', 'price': 200.00, 'quantity': 0},
+    {'name': 'Pathani Suit', 'image': 'assets/files/men/m-s-pathani.jpg', 'price': 100.00, 'quantity': 0},
+    {'name': 'Tuxedo', 'image': 'assets/files/men/m-s-tuxedo.jpg', 'price': 250.00, 'quantity': 0},
   ];
-
-  // Men Items for Denim category
-  final List<Map<String, dynamic>> _menDenimItems = [
-    {'name': 'Jeans', 'image': 'assets/files/men/m-s-jeans.jpg', 'price': 12.00, 'quantity': 0},
-    {'name': 'Denim Jacket', 'image': 'assets/files/men/m-s-denim-jacket.jpg', 'price': 18.00, 'quantity': 0},
-    {'name': 'Denim Shirt', 'image': 'assets/files/men/m-s-denim-shirt.jpg', 'price': 15.00, 'quantity': 0},
-  ];
-
-  // Men Items for Sports category
-  final List<Map<String, dynamic>> _menSportsItems = [
-    {'name': 'Track Pants', 'image': 'assets/files/men/m-s-track.jpg', 'price': 8.00, 'quantity': 0},
-    {'name': 'Sports Jersey', 'image': 'assets/files/men/m-s-jersey.jpg', 'price': 10.00, 'quantity': 0},
-    {'name': 'Gym Wear', 'image': 'assets/files/men/m-s-gym.jpg', 'price': 8.00, 'quantity': 0},
-  ];
-
-  // Men Items for Ethnic category
   final List<Map<String, dynamic>> _menEthnicItems = [
-    {'name': 'Kurta', 'image': 'assets/files/men/m-s-kurta.jpg', 'price': 15.00, 'quantity': 0},
-    {'name': 'Sherwani', 'image': 'assets/files/men/m-s-sherwani.jpg', 'price': 40.00, 'quantity': 0},
-    {'name': 'Pyjama', 'image': 'assets/files/men/m-s-pyjama.jpg', 'price': 8.00, 'quantity': 0},
-    {'name': 'Nehru Jacket', 'image': 'assets/files/men/m-s-nehru.jpg', 'price': 20.00, 'quantity': 0},
+    {'name': 'Kurta', 'image': 'assets/files/men/m-s-kurta.jpg', 'price': 40.00, 'quantity': 0},
+    {'name': 'Dhoti Kurta', 'image': 'assets/files/men/m-s-dhotikurta.jpg', 'price': 60.00, 'quantity': 0},
+    {'name': 'Kurta Pyjama', 'image': 'assets/files/men/m-s-kurtapyjama.jpg', 'price': 70.00, 'quantity': 0},
+  ];
+  final List<Map<String, dynamic>> _menKnitwearItems = [
+    {'name': 'Pullover', 'image': 'assets/files/men/m-s-pullover.jpg', 'price': 45.00, 'quantity': 0},
+    {'name': 'Sweater', 'image': 'assets/files/men/m-s-sweater.jpg', 'price': 50.00, 'quantity': 0},
+  ];
+  final List<Map<String, dynamic>> _menOuterwearItems = [
+    {'name': 'Coat', 'image': 'assets/files/men/m-s-coat.jpg', 'price': 120.00, 'quantity': 0},
+    {'name': 'Jacket Half', 'image': 'assets/files/men/m-s-jackethalf.jpg', 'price': 80.00, 'quantity': 0},
+    {'name': 'Jacket', 'image': 'assets/files/men/m-s-jacket.jpg', 'price': 100.00, 'quantity': 0},
+    {'name': 'Overcoat', 'image': 'assets/files/men/m-s-overcoat.jpg', 'price': 150.00, 'quantity': 0},
+    {'name': 'Long Coat', 'image': 'assets/files/men/m-s-longcoat.jpg', 'price': 180.00, 'quantity': 0},
+  ];
+  final List<Map<String, dynamic>> _menAccessoriesItems = [
+    {'name': 'Pocket Square', 'image': 'assets/files/men/m-s-pocketsquare.jpg', 'price': 15.00, 'quantity': 0},
+    {'name': 'Tie', 'image': 'assets/files/men/m-s-tie.jpg', 'price': 20.00, 'quantity': 0},
+  ];
+  final List<Map<String, dynamic>> _menSportsItems = [
+    {'name': 'Sports Jacket', 'image': 'assets/files/men/m-s-sportsjacket.jpg', 'price': 80.00, 'quantity': 0},
   ];
 
   // ============ KIDS ITEMS ============
-  final List<Map<String, dynamic>> _kidsBoysItems = [
-    {'name': 'T-Shirt', 'image': 'assets/files/kids/k-s-tshirt.jpg', 'price': 4.00, 'quantity': 0},
-    {'name': 'Shorts', 'image': 'assets/files/kids/k-s-shorts.jpg', 'price': 4.00, 'quantity': 0},
-    {'name': 'Jeans', 'image': 'assets/files/kids/k-s-jeans.jpg', 'price': 8.00, 'quantity': 0},
+  final List<Map<String, dynamic>> _kidsCasualItems = [
+    {'name': 'Shirt', 'image': 'assets/files/kids/k-s-shirt.jpg', 'price': 20.00, 'quantity': 0},
+    {'name': 'Jeans', 'image': 'assets/files/kids/k-s-jeans.jpg', 'price': 25.00, 'quantity': 0},
+    {'name': 'Pant', 'image': 'assets/files/kids/k-s-pant.jpg', 'price': 20.00, 'quantity': 0},
+    {'name': 'T-Shirt', 'image': 'assets/files/kids/k-s-tshirt.jpg', 'price': 15.00, 'quantity': 0},
+    {'name': 'Capri', 'image': 'assets/files/kids/k-s-capri.jpg', 'price': 18.00, 'quantity': 0},
+    {'name': 'Shorts', 'image': 'assets/files/kids/k-s-shorts.jpg', 'price': 15.00, 'quantity': 0},
+    {'name': 'Dangree', 'image': 'assets/files/kids/k-s-dangree.jpg', 'price': 25.00, 'quantity': 0},
+    {'name': 'Skirt', 'image': 'assets/files/kids/k-s-skirt.jpg', 'price': 18.00, 'quantity': 0},
   ];
-
-  final List<Map<String, dynamic>> _kidsGirlsItems = [
-    {'name': 'Dress', 'image': 'assets/files/kids/k-s-dress.jpg', 'price': 10.00, 'quantity': 0},
-    {'name': 'Frock', 'image': 'assets/files/kids/k-s-frock.jpg', 'price': 8.00, 'quantity': 0},
-    {'name': 'Skirt', 'image': 'assets/files/kids/k-s-skirt.jpg', 'price': 6.00, 'quantity': 0},
+  final List<Map<String, dynamic>> _kidsEthnicItems = [
+    {'name': 'Kurta', 'image': 'assets/files/kids/k-s-kurta.jpg', 'price': 25.00, 'quantity': 0},
+    {'name': 'Kurta Pyjama', 'image': 'assets/files/kids/k-s-kurtapyjama.jpg', 'price': 40.00, 'quantity': 0},
+    {'name': 'Sherwani', 'image': 'assets/files/kids/k-s-sherwani.jpg', 'price': 100.00, 'quantity': 0},
+    {'name': 'Girl Suit Ethnic', 'image': 'assets/files/kids/k-s-girlsuit.jpg', 'price': 80.00, 'quantity': 0},
+    {'name': 'Lehenga', 'image': 'assets/files/kids/k-s-lehenga.jpg', 'price': 90.00, 'quantity': 0},
+    {'name': 'Choli', 'image': 'assets/files/kids/k-s-choli.jpg', 'price': 40.00, 'quantity': 0},
+    {'name': 'Pathani Suit', 'image': 'assets/files/kids/k-s-pathani.jpg', 'price': 70.00, 'quantity': 0},
+    {'name': 'Achkan', 'image': 'assets/files/kids/k-s-achkan.jpg', 'price': 100.00, 'quantity': 0},
   ];
-
-  final List<Map<String, dynamic>> _kidsInfantsItems = [
-    {'name': 'Romper', 'image': 'assets/files/kids/k-s-romper.jpg', 'price': 5.00, 'quantity': 0},
-    {'name': 'Baby Suit', 'image': 'assets/files/kids/k-s-babysuit.jpg', 'price': 6.00, 'quantity': 0},
+  final List<Map<String, dynamic>> _kidsNightwearItems = [
+    {'name': 'Pyjama', 'image': 'assets/files/kids/k-s-pyjama.jpg', 'price': 15.00, 'quantity': 0},
+  ];
+  final List<Map<String, dynamic>> _kidsActiveItems = [
+    {'name': 'Track Pant', 'image': 'assets/files/kids/k-s-trackpant.jpg', 'price': 20.00, 'quantity': 0},
+    {'name': 'Sweatshirt', 'image': 'assets/files/kids/k-s-sweatshirt.jpg', 'price': 25.00, 'quantity': 0},
+  ];
+  final List<Map<String, dynamic>> _kidsSportsItems = [
+    {'name': 'Sports Jacket', 'image': 'assets/files/kids/k-s-sportsjacket.jpg', 'price': 60.00, 'quantity': 0},
+  ];
+  final List<Map<String, dynamic>> _kidsKnitwearItems = [
+    {'name': 'Pullover', 'image': 'assets/files/kids/k-s-pullover.jpg', 'price': 35.00, 'quantity': 0},
+    {'name': 'Sweater Half', 'image': 'assets/files/kids/k-s-sweaterhalf.jpg', 'price': 40.00, 'quantity': 0},
+  ];
+  final List<Map<String, dynamic>> _kidsOuterwearItems = [
+    {'name': 'Jacket', 'image': 'assets/files/kids/k-s-jacket.jpg', 'price': 60.00, 'quantity': 0},
+    {'name': 'Coat', 'image': 'assets/files/kids/k-s-coat.jpg', 'price': 80.00, 'quantity': 0},
+    {'name': 'Long Coat', 'image': 'assets/files/kids/k-s-longcoat.jpg', 'price': 100.00, 'quantity': 0},
+    {'name': 'Jacket Half', 'image': 'assets/files/kids/k-s-jackethalf.jpg', 'price': 50.00, 'quantity': 0},
+  ];
+  final List<Map<String, dynamic>> _kidsFormalItems = [
+    {'name': 'Suit (2 Pc)', 'image': 'assets/files/kids/k-s-suit2pc.jpg', 'price': 100.00, 'quantity': 0},
+    {'name': 'Suit (3 Pc)', 'image': 'assets/files/kids/k-s-suit3pc.jpg', 'price': 130.00, 'quantity': 0},
+    {'name': 'Dress Long', 'image': 'assets/files/kids/k-s-dresslong.jpg', 'price': 50.00, 'quantity': 0},
+    {'name': 'Dress', 'image': 'assets/files/kids/k-s-dress.jpg', 'price': 40.00, 'quantity': 0},
+    {'name': 'Gown', 'image': 'assets/files/kids/k-s-gown.jpg', 'price': 80.00, 'quantity': 0},
+    {'name': 'Waist Coat', 'image': 'assets/files/kids/k-s-waistcoat.jpg', 'price': 45.00, 'quantity': 0},
+  ];
+  final List<Map<String, dynamic>> _kidsSwimItems = [
+    {'name': 'Swimming Costume', 'image': 'assets/files/kids/k-s-swimwear.jpg', 'price': 25.00, 'quantity': 0},
+  ];
+  final List<Map<String, dynamic>> _kidsAccessoriesItems = [
+    {'name': 'Tie', 'image': 'assets/files/kids/k-s-tie.jpg', 'price': 15.00, 'quantity': 0},
   ];
 
   // ============ HOUSEHOLD ITEMS ============
   final List<Map<String, dynamic>> _householdBeddingItems = [
-    {'name': 'Bedsheet', 'image': 'assets/files/household/h-s-bedsheet.jpg', 'price': 15.00, 'quantity': 0},
-    {'name': 'Pillow Cover', 'image': 'assets/files/household/h-s-pillow.jpg', 'price': 5.00, 'quantity': 0},
-    {'name': 'Blanket', 'image': 'assets/files/household/h-s-blanket.jpg', 'price': 25.00, 'quantity': 0},
-    {'name': 'Comforter', 'image': 'assets/files/household/h-s-comforter.jpg', 'price': 30.00, 'quantity': 0},
+    {'name': 'Bedsheet Single', 'image': 'assets/files/household/h-s-bedsheetsingle.jpg', 'price': 30.00, 'quantity': 0},
+    {'name': 'Bedsheet Double', 'image': 'assets/files/household/h-s-bedsheetdouble.jpg', 'price': 50.00, 'quantity': 0},
+    {'name': 'Pillow Covers', 'image': 'assets/files/household/h-s-pillowcovers.jpg', 'price': 15.00, 'quantity': 0},
+    {'name': 'Blanket Single', 'image': 'assets/files/household/h-s-blanketsingle.jpg', 'price': 80.00, 'quantity': 0},
+    {'name': 'Blanket Double', 'image': 'assets/files/household/h-s-blanketdouble.jpg', 'price': 120.00, 'quantity': 0},
+    {'name': 'Duvet', 'image': 'assets/files/household/h-s-duvet.jpg', 'price': 150.00, 'quantity': 0},
   ];
-
-  final List<Map<String, dynamic>> _householdCurtainsItems = [
-    {'name': 'Curtain', 'image': 'assets/files/household/h-s-curtain.jpg', 'price': 20.00, 'quantity': 0},
-    {'name': 'Drapes', 'image': 'assets/files/household/h-s-drapes.jpg', 'price': 25.00, 'quantity': 0},
+  final List<Map<String, dynamic>> _householdFurnishingItems = [
+    {'name': 'Curtain', 'image': 'assets/files/household/h-s-curtain.jpg', 'price': 60.00, 'quantity': 0},
+    {'name': 'Cushion Cover', 'image': 'assets/files/household/h-s-cushioncover.jpg', 'price': 20.00, 'quantity': 0},
+    {'name': 'Chair Cover', 'image': 'assets/files/household/h-s-chaircover.jpg', 'price': 50.00, 'quantity': 0},
   ];
-
   final List<Map<String, dynamic>> _householdTowelsItems = [
-    {'name': 'Bath Towel', 'image': 'assets/files/household/h-s-towel.jpg', 'price': 8.00, 'quantity': 0},
-    {'name': 'Hand Towel', 'image': 'assets/files/household/h-s-handtowel.jpg', 'price': 4.00, 'quantity': 0},
+    {'name': 'Hand Towel', 'image': 'assets/files/household/h-s-handtowel.jpg', 'price': 15.00, 'quantity': 0},
+    {'name': 'Towel', 'image': 'assets/files/household/h-s-towel.jpg', 'price': 25.00, 'quantity': 0},
+  ];
+  final List<Map<String, dynamic>> _householdDiningItems = [
+    {'name': 'Table Cloth', 'image': 'assets/files/household/h-s-tablecloth.jpg', 'price': 35.00, 'quantity': 0},
+  ];
+  final List<Map<String, dynamic>> _householdAccessoriesItems = [
+    {'name': 'Fabric Bag', 'image': 'assets/files/household/h-s-fabricbag.jpg', 'price': 20.00, 'quantity': 0},
+    {'name': 'Gloves', 'image': 'assets/files/household/h-s-gloves.jpg', 'price': 15.00, 'quantity': 0},
+  ];
+  final List<Map<String, dynamic>> _householdLinensItems = [
+    {'name': 'Handkerchief', 'image': 'assets/files/household/h-s-handkerchief.jpg', 'price': 5.00, 'quantity': 0},
+  ];
+  final List<Map<String, dynamic>> _householdFloorsItems = [
+    {'name': 'Foot Mats', 'image': 'assets/files/household/h-s-footmats.jpg', 'price': 30.00, 'quantity': 0},
+  ];
+  final List<Map<String, dynamic>> _householdHosieryItems = [
+    {'name': 'Socks', 'image': 'assets/files/household/h-s-socks.jpg', 'price': 10.00, 'quantity': 0},
+  ];
+  final List<Map<String, dynamic>> _householdWindowItems = [
+    {'name': 'Sheer Curtain', 'image': 'assets/files/household/h-s-sheercurtain.jpg', 'price': 40.00, 'quantity': 0},
   ];
 
-  // ============ INSTITUTIONS ITEMS ============
-  final List<Map<String, dynamic>> _institutionsHotelsItems = [
-    {'name': 'Hotel Bedsheet', 'image': 'assets/files/institutions/i-s-bedsheet.jpg', 'price': 20.00, 'quantity': 0},
-    {'name': 'Hotel Towel', 'image': 'assets/files/institutions/i-s-towel.jpg', 'price': 10.00, 'quantity': 0},
-    {'name': 'Table Cloth', 'image': 'assets/files/institutions/i-s-tablecloth.jpg', 'price': 15.00, 'quantity': 0},
+  // ============ INSTITUTIONAL ITEMS ============
+  final List<Map<String, dynamic>> _institutionsBeddingItems = [
+    {'name': 'Bedsheet Single', 'image': 'assets/files/institutions/i-s-bedsheetsingle.jpg', 'price': 40.00, 'quantity': 0},
+    {'name': 'Bedsheet Double', 'image': 'assets/files/institutions/i-s-bedsheetdouble.jpg', 'price': 60.00, 'quantity': 0},
+    {'name': 'Bedspread Single', 'image': 'assets/files/institutions/i-s-bedspreadsingle.jpg', 'price': 50.00, 'quantity': 0},
+    {'name': 'Bedspread Double', 'image': 'assets/files/institutions/i-s-bedspreaddouble.jpg', 'price': 70.00, 'quantity': 0},
+    {'name': 'Blanket Single', 'image': 'assets/files/institutions/i-s-blanketsingle.jpg', 'price': 100.00, 'quantity': 0},
+    {'name': 'Blanket Double', 'image': 'assets/files/institutions/i-s-blanketdouble.jpg', 'price': 140.00, 'quantity': 0},
+    {'name': 'Quilt Single', 'image': 'assets/files/institutions/i-s-quiltsingle.jpg', 'price': 120.00, 'quantity': 0},
+    {'name': 'Quilt Double', 'image': 'assets/files/institutions/i-s-quiltdouble.jpg', 'price': 160.00, 'quantity': 0},
+    {'name': 'Duvet', 'image': 'assets/files/institutions/i-s-duvet.jpg', 'price': 180.00, 'quantity': 0},
+    {'name': 'Pillow Covers', 'image': 'assets/files/institutions/i-s-pillowcovers.jpg', 'price': 20.00, 'quantity': 0},
   ];
-
-  final List<Map<String, dynamic>> _institutionsHospitalsItems = [
-    {'name': 'Hospital Gown', 'image': 'assets/files/institutions/i-s-gown.jpg', 'price': 12.00, 'quantity': 0},
-    {'name': 'Lab Coat', 'image': 'assets/files/institutions/i-s-labcoat.jpg', 'price': 15.00, 'quantity': 0},
+  final List<Map<String, dynamic>> _institutionsTowelsItems = [
+    {'name': 'Towel', 'image': 'assets/files/institutions/i-s-towel.jpg', 'price': 30.00, 'quantity': 0},
+    {'name': 'Hand Towels', 'image': 'assets/files/institutions/i-s-handtowels.jpg', 'price': 15.00, 'quantity': 0},
+  ];
+  final List<Map<String, dynamic>> _institutionsFurnishingItems = [
+    {'name': 'Chair Cover', 'image': 'assets/files/institutions/i-s-chaircover.jpg', 'price': 60.00, 'quantity': 0},
+    {'name': 'Curtain', 'image': 'assets/files/institutions/i-s-curtain.jpg', 'price': 80.00, 'quantity': 0},
+    {'name': 'Cushion Cover', 'image': 'assets/files/institutions/i-s-cushioncover.jpg', 'price': 40.00, 'quantity': 0},
+  ];
+  final List<Map<String, dynamic>> _institutionsFloorsItems = [
+    {'name': 'Foot Mats', 'image': 'assets/files/institutions/i-s-footmats.jpg', 'price': 50.00, 'quantity': 0},
+  ];
+  final List<Map<String, dynamic>> _institutionsDiningItems = [
+    {'name': 'Table Cloth', 'image': 'assets/files/institutions/i-s-tablecloth.jpg', 'price': 45.00, 'quantity': 0},
   ];
 
   // ============ OTHERS ITEMS ============
-  final List<Map<String, dynamic>> _othersFootwearItems = [
-    {'name': 'Shoes', 'image': 'assets/files/others/o-s-shoes.jpg', 'price': 15.00, 'quantity': 0},
-    {'name': 'Sneakers', 'image': 'assets/files/others/o-s-sneakers.jpg', 'price': 18.00, 'quantity': 0},
+  final List<Map<String, dynamic>> _othersOuterwearItems = [
+    {'name': 'Rain Coat', 'image': 'assets/files/others/o-s-raincoat.jpg', 'price': 60.00, 'quantity': 0},
+  ];
+  final List<Map<String, dynamic>> _othersAccessoriesItems = [
+    {'name': 'Hat', 'image': 'assets/files/others/o-s-hat.jpg', 'price': 30.00, 'quantity': 0},
+    {'name': 'Belt', 'image': 'assets/files/others/o-s-belt.jpg', 'price': 25.00, 'quantity': 0},
+  ];
+  final List<Map<String, dynamic>> _othersAutoItems = [
+    {'name': 'Car Seatcover', 'image': 'assets/files/others/o-s-carseatcover.jpg', 'price': 100.00, 'quantity': 0},
+  ];
+  final List<Map<String, dynamic>> _othersToysItems = [
+    {'name': 'Stuff Toy', 'image': 'assets/files/others/o-s-stufftoy.jpg', 'price': 40.00, 'quantity': 0},
   ];
 
-  final List<Map<String, dynamic>> _othersBagsItems = [
-    {'name': 'Handbag', 'image': 'assets/files/others/o-s-handbag.jpg', 'price': 20.00, 'quantity': 0},
-    {'name': 'Backpack', 'image': 'assets/files/others/o-s-backpack.jpg', 'price': 15.00, 'quantity': 0},
-  ];
-
-  // Default items for categories without specific items
+  // Default items
   final List<Map<String, dynamic>> _defaultItems = [
-    {'name': 'Item 1', 'image': 'assets/images/washing.png', 'price': 10.00, 'quantity': 0},
-    {'name': 'Item 2', 'image': 'assets/images/washing.png', 'price': 15.00, 'quantity': 0},
+    {'name': 'Item', 'image': 'assets/images/washing.png', 'price': 10.00, 'quantity': 0},
   ];
 
   List<Map<String, dynamic>> get _currentItems {
@@ -390,37 +503,62 @@ class _BookServiceScreenState extends State<BookServiceScreen> {
       case 'Men':
         switch (_selectedSubCategory) {
           case 'Casual': return _menCasualItems;
+          case 'Nightwear': return _menNightwearItems;
+          case 'Active': return _menActiveItems;
+          case 'Home': return _menHomeItems;
+          case 'Innerwear': return _menInnerwearItems;
+          case 'Swim': return _menSwimItems;
           case 'Formal': return _menFormalItems;
-          case 'Denim': return _menDenimItems;
-          case 'Sports': return _menSportsItems;
           case 'Ethnic': return _menEthnicItems;
+          case 'Knitwear': return _menKnitwearItems;
+          case 'Outerwear': return _menOuterwearItems;
+          case 'Accessories': return _menAccessoriesItems;
+          case 'Sports': return _menSportsItems;
           default: return _menCasualItems;
         }
       case 'Kids':
         switch (_selectedSubCategory) {
-          case 'Boys': return _kidsBoysItems;
-          case 'Girls': return _kidsGirlsItems;
-          case 'Infants': return _kidsInfantsItems;
-          default: return _kidsBoysItems;
+          case 'Casual': return _kidsCasualItems;
+          case 'Ethnic': return _kidsEthnicItems;
+          case 'Nightwear': return _kidsNightwearItems;
+          case 'Active': return _kidsActiveItems;
+          case 'Sports': return _kidsSportsItems;
+          case 'Knitwear': return _kidsKnitwearItems;
+          case 'Outerwear': return _kidsOuterwearItems;
+          case 'Formal': return _kidsFormalItems;
+          case 'Swim': return _kidsSwimItems;
+          case 'Accessories': return _kidsAccessoriesItems;
+          default: return _kidsCasualItems;
         }
       case 'Household':
         switch (_selectedSubCategory) {
           case 'Bedding': return _householdBeddingItems;
-          case 'Curtains': return _householdCurtainsItems;
+          case 'Furnishing': return _householdFurnishingItems;
           case 'Towels': return _householdTowelsItems;
+          case 'Dining': return _householdDiningItems;
+          case 'Accessories': return _householdAccessoriesItems;
+          case 'Linens': return _householdLinensItems;
+          case 'Floors': return _householdFloorsItems;
+          case 'Hosiery': return _householdHosieryItems;
+          case 'Window': return _householdWindowItems;
           default: return _householdBeddingItems;
         }
       case 'Institutions':
         switch (_selectedSubCategory) {
-          case 'Hotels': return _institutionsHotelsItems;
-          case 'Hospitals': return _institutionsHospitalsItems;
-          default: return _institutionsHotelsItems;
+          case 'Bedding': return _institutionsBeddingItems;
+          case 'Towels': return _institutionsTowelsItems;
+          case 'Furnishing': return _institutionsFurnishingItems;
+          case 'Floors': return _institutionsFloorsItems;
+          case 'Dining': return _institutionsDiningItems;
+          default: return _institutionsBeddingItems;
         }
       case 'Others':
         switch (_selectedSubCategory) {
-          case 'Footwear': return _othersFootwearItems;
-          case 'Bags': return _othersBagsItems;
-          default: return _othersFootwearItems;
+          case 'Outerwear': return _othersOuterwearItems;
+          case 'Accessories': return _othersAccessoriesItems;
+          case 'Auto': return _othersAutoItems;
+          case 'Toys': return _othersToysItems;
+          default: return _othersOuterwearItems;
         }
       default:
         return _defaultItems;
@@ -503,16 +641,16 @@ class _BookServiceScreenState extends State<BookServiceScreen> {
                               _selectedSubCategory = 'Casual';
                               break;
                             case 'Kids':
-                              _selectedSubCategory = 'Boys';
+                              _selectedSubCategory = 'Casual';
                               break;
                             case 'Household':
                               _selectedSubCategory = 'Bedding';
                               break;
                             case 'Institutions':
-                              _selectedSubCategory = 'Hotels';
+                              _selectedSubCategory = 'Bedding';
                               break;
                             case 'Others':
-                              _selectedSubCategory = 'Footwear';
+                              _selectedSubCategory = 'Outerwear';
                               break;
                           }
                         });
