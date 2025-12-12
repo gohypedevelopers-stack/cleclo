@@ -99,7 +99,7 @@ class AuthWelcomeScreen extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () {
-                      // TODO: navigate to login
+                      context.pushNamed(RouteConstants.loginScreen);
                     },
                     child: Text(
                       'Login',

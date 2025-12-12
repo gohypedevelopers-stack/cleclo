@@ -1,4 +1,7 @@
 import 'package:cleclo/features/auth/view/auth_welcome_screen.dart';
+import 'package:cleclo/features/auth/view/login_screen.dart';
+import 'package:cleclo/features/auth/view/forgot_password_screen.dart';
+import 'package:cleclo/features/auth/view/create_new_password_screen.dart';
 import 'package:cleclo/features/auth/view/register_screen.dart';
 import 'package:cleclo/features/auth/view/register_send_otp.dart';
 import 'package:cleclo/features/auth/view/verify_otp_screen.dart';
@@ -55,6 +58,24 @@ final GoRouter appRouter = GoRouter(
       path: RouteConstants.registerScreen,
       name: RouteConstants.registerScreen,
       builder: (context, state) => const RegisterScreen(),
+    ),
+    GoRoute(
+      path: RouteConstants.loginScreen,
+      name: RouteConstants.loginScreen,
+      builder: (context, state) => const LoginScreen(),
+    ),
+    GoRoute(
+      path: RouteConstants.forgotPasswordScreen,
+      name: RouteConstants.forgotPasswordScreen,
+      builder: (context, state) {
+        final email = state.uri.queryParameters['email'] ?? 'sample@example.com';
+        return ForgotPasswordScreen(email: email);
+      },
+    ),
+    GoRoute(
+      path: RouteConstants.createNewPasswordScreen,
+      name: RouteConstants.createNewPasswordScreen,
+      builder: (context, state) => const CreateNewPasswordScreen(),
     ),
     GoRoute(
       path: RouteConstants.enableLocationScreen,

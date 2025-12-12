@@ -5,6 +5,9 @@ class RouteConstants {
   static const registerSendOtp = "/register-send-otp";
   static const verifyOtpScreen = "/verify-otp-screen";
   static const registerScreen = "/register-screen";
+  static const loginScreen = "/login-screen";
+  static const forgotPasswordScreen = "/forgot-password-screen";
+  static const createNewPasswordScreen = "/create-new-password-screen";
   static const enableLocationScreen = "/enable-location-screen";
   static const bottomNavBarScreen = "/bottom-nav-bar";
   static const bookServiceScreen = "/book-service";
